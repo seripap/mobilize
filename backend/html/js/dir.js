@@ -24,14 +24,20 @@ function write_cats (data){
 
 
 		console.log(element.title+":"+element.haskids);
-		html +="<li>"+"<span class='action' id='"+element.cid+"' rel='"+(element.haskids ?  "getkids" :  "getentries")+"'>"+element.title + "</span></li>";
+		html +="<li class='action' id='"+element.cid+"' rel='"+(element.haskids ?  "getkids" :  "getentries")+"'>"+generaterow(element.title,'')+"</li>";
 
 	});
+	html += "</ul>";
 	$("#dir_content").html(html);
 	run_links();
 }
-function generaterow(id,rel,label,icon){
+
+function generaterow(label)
+{
 var html ='<div class="icon-block left"><span class="icon"></span></div>';
+html +='<div class="text-block"><p class="title">'+label+'Atlanta Day Shelter</p></div>';
+html +='<div class="icon-block right"><span class="icon icon-angle-right"></span></div>';
+return html;
 }
 function write_entries(data){
 	var html="";
