@@ -130,19 +130,20 @@ class Chat_model extends CI_Model {
 				),
 			'to_user_id' => array(
 				'type' => 'INT'
-				)
+				),
+			'conversation_id' => array(
+				'type' => 'INT'
+				),
 			);
 
 		/* Add the field before creating the table */
 		$this->dbforge->add_field($fields);
-
-
 		/* Specify the primary key to the 'id' field */
 		$this->dbforge->add_key('id', TRUE);
-
-
 		/* Create the table (if it doesn't already exist) */
 		$this->dbforge->create_table('messages', TRUE);
+
+
 	}
 
 

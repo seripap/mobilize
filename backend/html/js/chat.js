@@ -1,6 +1,6 @@
     var time = 0;
     var helperid = $.segment(3);
-    var memData = '';
+    var memData = '';;
 
     if (!helperid) {
       helperid = 1;
@@ -13,7 +13,7 @@
     };
 
     var sendChat = function (message) {
-      $.getJSON("../chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + helperid, function (){
+      $.getJSON("../chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + helperid + "&convoid=" + helperid, function (){
         $('#message_container').html('');
         getNewChats();
       });

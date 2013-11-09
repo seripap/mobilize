@@ -1,7 +1,7 @@
 <ul class="list indented users">
     <li>
         <div class="portrait-block">
-            <img src="/images/lnf_contact.jpg" class="rounded">
+            <img src="http://o0h.org/images/lnf_contact.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -18,10 +18,10 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="/images/art.jpg" class="rounded">
+            <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="chat/1">
+        <a href="http://local.o0h.org/index.php/chat/1">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -37,7 +37,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="/images/jason.jpg" class="rounded">
+            <img src="http://o0h.org/images/jason.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -54,7 +54,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="/images/justin.jpg" class="rounded">
+            <img src="http://o0h.org/images/justin.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">

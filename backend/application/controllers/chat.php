@@ -36,7 +36,7 @@ class Chat extends CI_Controller {
 		/* Create a table if it doesn't exist already */
 		$this->Chat_model->create_table();
 
-		$this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"]);
+		$this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"], $_REQUEST["convoid"]);
 
 		echo json_encode('done');
 	}
