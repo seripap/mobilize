@@ -1,0 +1,538 @@
+/*
+This file has EDITS
+*/
+/*
+################################################
+Name: variables.less
+
+Description:
+Contains all the Less variables used across all the stylesheets.
+
+################################################
+*/
+/*
+################################################
+INDEX
+
+02: Colour Palette
+03: Typography
+04: UI and UX
+05: Sprites/Background Images
+
+################################################
+*/
+/*
+################################################
+01: 978 Grid
+################################################
+*/
+/* Top level Layout */
+/* This is the width of all columns + all gutters */
+/* Padding of 15 on either side = 30 - Relative to Max Layout Width */
+/* 54 / 1008 - Relative to Max Layout Width */
+/* Base column + either side gutters */
+/* (54 *12) + (15 * 22) = 978 */
+/** Nexted Grid */
+              				                  /* 9 Column Nested Grid
+$base-column-9				:7.438016528926%; /* 54/726 */
+/* 15/726 */
+/*30.578512396694% /* 222/726 */
+/*42.148760330579%; */
+/* 53.719008264463%; */
+/* 65.289256198347%; */
+/* 76.859504132231%; */
+/* 88.429752066116; */
+/*  7.438016528926; */
+/*
+################################################
+02: Colour Palette
+################################################
+*/
+/* Blue */
+/* Darkest blue */
+/* Lightest blue */
+/*Nav blue */
+/* Secondary */
+/* Complimentary */
+/*
+################################################
+03: Typography
+################################################
+*/
+/* Fonts available - USE minimally
+font-family:'FrutigerLTW01-45Light';
+font-family:'FrutigerLTW01-46LightIt';
+font-family:'FrutigerLTW01-47LightCn';
+font-family:'FrutigerLTW01-48LightCn';
+font-family:'FrutigerLTW01-55Roman';
+font-family:'FrutigerLTW01-56Italic';
+font-family:'FrutigerLTW01-57Condens';
+font-family:'FrutigerLTW01-58Condens';
+font-family:'Frutiger LT W01 65 Bold';
+font-family:'FrutigerLTW01-66BoldIta';
+font-family:'FrutigerLTW01-67BoldCn';
+font-family:'FrutigerLTW01-68BoldCnI';
+font-family:'FrutigerLTW01-75Black';
+font-family:'FrutigerLTW01-76BlackIt';
+font-family:'FrutigerLTW01-77BlackCn';
+font-family:'FrutigerLTW01-78BlackCn';
+font-family:'FrutigerLTW01-87ExtraBk';
+font-family:'FrutigerLTW01-88XBkCnIt';
+font-family:'FrutigerLTW01-95UltraBl';
+font-family:'FrutigerLTW20-45Light';
+font-family:'FrutigerLTW20-47LightCn';
+font-family:'FrutigerLTW20-55Roman';
+font-family:'Frutiger LT W20 57 Cn';
+font-family:'Frutiger LT W20 65 Bold';
+font-family:'FrutigerLTW20-67BoldCn';
+font-family:'FrutigerLTW20-75Black';
+font-family:'FrutigerLTW20-77BlackCn';
+*/
+/* 54px */
+/* 22px */
+/*
+################################################
+04: UI & UX
+################################################
+*/
+/*
+################################################
+Name: branding.less
+
+Description:
+Sets brand consistency with fonts and colours.
+
+################################################
+*/
+/*
+################################################
+INDEX
+
+01: Colour Palette
+02: Web Fonts
+03: Font sizes
+04: Formatting
+05: SECTION SPECIFIC TYPE STYLES
+06: NESTED LIST STYLE
+
+################################################
+*/
+/*
+################################################
+01: Global Colour Palette
+################################################
+*/
+/* line 36, ../../compass/sass/branding.scss */
+a,
+.current .subnav-item a,
+.current .sidebar-subnav a {
+  color: #00a1de;
+}
+
+/* line 41, ../../compass/sass/branding.scss */
+a.cammo {
+  color: #616365;
+}
+
+/* line 46, ../../compass/sass/branding.scss */
+a:hover {
+  color: #004e6c;
+}
+
+/* line 52, ../../compass/sass/branding.scss */
+.current,
+.current a {
+  color: #373a3c;
+}
+
+/* line 57, ../../compass/sass/branding.scss */
+.current .subnav-item-current a {
+  color: #616365;
+}
+
+/* line 62, ../../compass/sass/branding.scss */
+figure img {
+  display: inline-block;
+}
+
+/*
+################################################
+02: Web Fonts
+################################################
+*/
+/*
+################################################
+02: Font sizes
+################################################
+*/
+/* line 81, ../../compass/sass/branding.scss */
+body {
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #616365;
+}
+
+/* line 94, ../../compass/sass/branding.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend {
+  margin: 0;
+  font-family: "FrutigerLTW20-55Roman", Helvetica Neue, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: normal;
+  color: #373a3c;
+}
+
+/* line 103, ../../compass/sass/branding.scss */
+h1 {
+  font-size: 2em;
+  margin-bottom: .25em;
+  padding: 0;
+  line-height: 2em;
+}
+
+/* line 111, ../../compass/sass/branding.scss */
+.main-container h1 {
+  margin-top: -.3em;
+  line-height: 1.5em;
+}
+
+/* line 117, ../../compass/sass/branding.scss */
+h2 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  line-height: 1.75em;
+}
+
+/* line 123, ../../compass/sass/branding.scss */
+.body-solutions h3 {
+  line-height: 1em !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* line 129, ../../compass/sass/branding.scss */
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+
+/* line 135, ../../compass/sass/branding.scss */
+h3.module-header {
+  margin-bottom: 0.3375em;
+}
+
+/* line 140, ../../compass/sass/branding.scss */
+h3.section-header {
+  margin-bottom: 0.84375em;
+}
+
+/* line 147, ../../compass/sass/branding.scss */
+h4,
+li h4,
+legend {
+  font-size: 1.25em;
+  margin-bottom: .2em;
+  line-height: 1.25em;
+}
+
+/* line 154, ../../compass/sass/branding.scss */
+h5 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: .2em;
+  color: #373a3c;
+}
+
+/* line 162, ../../compass/sass/branding.scss */
+h6 {
+  font-size: .875em;
+  margin-bottom: 10px;
+  line-height: .875em;
+}
+
+/* line 169, ../../compass/sass/branding.scss */
+p {
+  font-size: .875em;
+  line-height: 1.35em;
+  margin-bottom: 1.375em;
+}
+
+/* line 176, ../../compass/sass/branding.scss */
+label {
+  font-size: .875em;
+  color: #373a3c;
+}
+
+/* line 183, ../../compass/sass/branding.scss */
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 1.375em 1.5em;
+}
+
+/* line 189, ../../compass/sass/branding.scss */
+li {
+  font-size: .875em;
+  line-height: 1.35em;
+  margin-bottom: .75em;
+}
+
+/* line 196, ../../compass/sass/branding.scss */
+li p {
+  font-size: inherit;
+}
+
+/* line 201, ../../compass/sass/branding.scss */
+li h4 {
+  font-size: 1.428em;
+}
+
+/* line 210, ../../compass/sass/branding.scss */
+ul ul,
+ul ol,
+ol ol,
+ol ul,
+li li {
+  font-size: inherit;
+}
+
+/* line 215, ../../compass/sass/branding.scss */
+dt {
+  font-weight: bold;
+}
+
+/* Headings in lists - use H4 - see the footer for example */
+/* line 221, ../../compass/sass/branding.scss */
+.list-header {
+  margin-top: 1.375em;
+}
+
+/* line 226, ../../compass/sass/branding.scss */
+.prettylist li {
+  padding: 0.84375em 0 0.84375em 1.6875em;
+  margin-bottom: 0;
+  border-bottom: 1px dotted #d2d5d7;
+  list-style-type: none;
+  list-image: none;
+}
+
+/* line 235, ../../compass/sass/branding.scss */
+.nobullets {
+  margin-left: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* line 242, ../../compass/sass/branding.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 247, ../../compass/sass/branding.scss */
+.fine-print {
+  font-size: .8em;
+}
+
+/* line 251, ../../compass/sass/branding.scss */
+blockquote {
+  padding: 0;
+  margin: 0;
+  border-left: 5px solid;
+}
+
+/* Lists with images and also titles */
+/* line 259, ../../compass/sass/branding.scss */
+.image-list figure img {
+  display: block;
+}
+
+/* line 264, ../../compass/sass/branding.scss */
+.image-list li {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  padding-bottom: 2em;
+}
+
+/* line 272, ../../compass/sass/branding.scss */
+.image-list-meta {
+  font-size: .875em;
+  display: block;
+  text-align: center;
+  padding: .5em;
+}
+
+/* line 280, ../../compass/sass/branding.scss */
+.image-list li:after {
+  content: "X";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  margin-bottom: 3em;
+}
+
+/* line 290, ../../compass/sass/branding.scss */
+.image-list-3-cols li {
+  float: none !important;
+}
+
+/* line 295, ../../compass/sass/branding.scss */
+.image-list figure {
+  padding: 1px;
+  background: #eee;
+}
+
+/* line 301, ../../compass/sass/branding.scss */
+.image-list h4 {
+  font-size: 1.4em;
+}
+
+/* SECTION SPECIFIC TYPE */
+/*
+################################################
+03: Formatting
+################################################
+*/
+/* line 315, ../../compass/sass/branding.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 320, ../../compass/sass/branding.scss */
+em, i {
+  font-style: italic;
+}
+
+/* line 325, ../../compass/sass/branding.scss */
+sup, sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* line 333, ../../compass/sass/branding.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 338, ../../compass/sass/branding.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 343, ../../compass/sass/branding.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+/* line 349, ../../compass/sass/branding.scss */
+.hor-list li {
+  float: left;
+  margin-right: 1.375em;
+}
+
+/* line 354, ../../compass/sass/branding.scss */
+.sidebar-hor-list li {
+  float: left;
+}
+
+/* line 359, ../../compass/sass/branding.scss */
+.sidebar-nav li {
+  border-bottom: 1px dotted #d2d5d7;
+  padding: 0 0 0.5em 0;
+}
+
+/* line 365, ../../compass/sass/branding.scss */
+.sidebar-subnav li {
+  padding: 0;
+}
+
+/*
+################################################
+05: SECTION SPECIFIC STYLES
+################################################
+*/
+/*
+################################################
+06: NEST LIST STYLE
+################################################
+*/
+/* line 383, ../../compass/sass/branding.scss */
+ul {
+  list-style-image: url("/global-assets/images/icon-bullet-16x16.png");
+  list-style-type: disc;
+}
+
+/* line 388, ../../compass/sass/branding.scss */
+ul > li ul {
+  list-style-image: url("/global-assets/images/icon-bullet-level2-16x16.png");
+  list-style-type: disc;
+  margin-bottom: 0;
+}
+
+/* line 394, ../../compass/sass/branding.scss */
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}
+
+/* line 398, ../../compass/sass/branding.scss */
+ul ul, ol ul, ul ol, ol ol {
+  font-size: 1em;
+  margin-top: 0.75em;
+}
+
+/* line 402, ../../compass/sass/branding.scss */
+nav ul, form ol {
+  list-style: none outside none;
+  padding: 0;
+}
+
+/* line 406, ../../compass/sass/branding.scss */
+p, ul li, ol li {
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 410, ../../compass/sass/branding.scss */
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+/*
+CALL OUTS and HIGHLIGHTED CONTENT
+*/
+/* line 418, ../../compass/sass/branding.scss */
+.highlighted-info {
+  padding: .5em;
+  /*border-radius:$rounded-corners-small;*/
+  transition: background-color 1s ease-in;
+  background: #caedfa;
+}
+
+/* line 426, ../../compass/sass/branding.scss */
+.highlighted-info h4 {
+  margin-bottom: .5em;
+  padding-bottom: .35em;
+  border-bottom: 1px solid white;
+}
+
+/* line 433, ../../compass/sass/branding.scss */
+.highlighted-info li {
+  border-bottom: 1px dotted #a5e0f7;
+}
+
+/* line 438, ../../compass/sass/branding.scss */
+.highlighted-info:hover {
+  transition: background-color 1s ease-in;
+  background: #ddf3fc;
+}

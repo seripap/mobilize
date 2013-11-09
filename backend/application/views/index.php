@@ -1,8 +1,19 @@
-<h1><?php echo lang('login_heading');?></h1>
-<p><?php echo lang('login_subheading');?></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Youth Help - LNF</title>
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/branding.css">
+</head>
+<body>
 
-<div id="infoMessage"><?php echo $message;?></div>
-
+	<div class="wrapper main-content">
+		<section class="columns-12">
+		Logo
+		</section>
+		<section class="columns-12">
 <?php echo form_open("auth/login");?>
 
   <p>
@@ -26,4 +37,9 @@
 <?php echo form_close();?>
 
 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
-<p><a href="register">Register</a></p>
+		</section>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+/*
+This file has EDITS
+*/
+/*
+################################################
+Name: variables.less
+
+Description:
+Contains all the Less variables used across all the stylesheets.
+
+################################################
+*/
+/*
+################################################
+INDEX
+
+02: Colour Palette
+03: Typography
+04: UI and UX
+05: Sprites/Background Images
+
+################################################
+*/
+/*
+################################################
+01: 978 Grid
+################################################
+*/
+/* Top level Layout */
+/* This is the width of all columns + all gutters */
+/* Padding of 15 on either side = 30 - Relative to Max Layout Width */
+/* 54 / 1008 - Relative to Max Layout Width */
+/* Base column + either side gutters */
+/* (54 *12) + (15 * 22) = 978 */
+/** Nexted Grid */
+              				                  /* 9 Column Nested Grid
+$base-column-9				:7.438016528926%; /* 54/726 */
+/* 15/726 */
+/*30.578512396694% /* 222/726 */
+/*42.148760330579%; */
+/* 53.719008264463%; */
+/* 65.289256198347%; */
+/* 76.859504132231%; */
+/* 88.429752066116; */
+/*  7.438016528926; */
+/*
+################################################
+02: Colour Palette
+################################################
+*/
+/* Blue */
+/* Darkest blue */
+/* Lightest blue */
+/*Nav blue */
+/* Secondary */
+/* Complimentary */
+/*
+################################################
+03: Typography
+################################################
+*/
+/* Fonts available - USE minimally
+font-family:'FrutigerLTW01-45Light';
+font-family:'FrutigerLTW01-46LightIt';
+font-family:'FrutigerLTW01-47LightCn';
+font-family:'FrutigerLTW01-48LightCn';
+font-family:'FrutigerLTW01-55Roman';
+font-family:'FrutigerLTW01-56Italic';
+font-family:'FrutigerLTW01-57Condens';
+font-family:'FrutigerLTW01-58Condens';
+font-family:'Frutiger LT W01 65 Bold';
+font-family:'FrutigerLTW01-66BoldIta';
+font-family:'FrutigerLTW01-67BoldCn';
+font-family:'FrutigerLTW01-68BoldCnI';
+font-family:'FrutigerLTW01-75Black';
+font-family:'FrutigerLTW01-76BlackIt';
+font-family:'FrutigerLTW01-77BlackCn';
+font-family:'FrutigerLTW01-78BlackCn';
+font-family:'FrutigerLTW01-87ExtraBk';
+font-family:'FrutigerLTW01-88XBkCnIt';
+font-family:'FrutigerLTW01-95UltraBl';
+font-family:'FrutigerLTW20-45Light';
+font-family:'FrutigerLTW20-47LightCn';
+font-family:'FrutigerLTW20-55Roman';
+font-family:'Frutiger LT W20 57 Cn';
+font-family:'Frutiger LT W20 65 Bold';
+font-family:'FrutigerLTW20-67BoldCn';
+font-family:'FrutigerLTW20-75Black';
+font-family:'FrutigerLTW20-77BlackCn';
+*/
+/* 54px */
+/* 22px */
+/*
+################################################
+04: UI & UX
+################################################
+*/

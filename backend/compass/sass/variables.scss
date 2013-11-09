@@ -1,0 +1,145 @@
+/*
+This file has EDITS
+*/
+
+/*
+################################################
+Name: variables.less
+
+Description:
+Contains all the Less variables used across all the stylesheets.
+
+################################################
+*/
+
+/*
+################################################
+INDEX
+
+02: Colour Palette
+03: Typography
+04: UI and UX
+05: Sprites/Background Images
+
+################################################
+*/
+
+
+/*
+################################################
+01: 978 Grid
+################################################
+*/
+/* Top level Layout */
+$max-layout-width			:1008px; /* This is the width of all columns + all gutters */
+$gutter						:01.488095238095%; /* Padding of 15 on either side = 30 - Relative to Max Layout Width */
+
+$base-column				:05.357142857143%; /* 54 / 1008 - Relative to Max Layout Width */
+$base-column-2 				:$base-column * 2 + ($gutter) * 2; /* Base column + either side gutters */
+$base-column-3	 			:$base-column * 3 + ($gutter) * 4;
+$base-column-4 				:$base-column * 4 + ($gutter) * 6;
+$base-column-5 				:$base-column * 5 + ($gutter) * 8;
+$base-column-6 				:$base-column * 6 + ($gutter) * 10;
+$base-column-7 				:$base-column * 7 + ($gutter) * 12;
+$base-column-8 				:$base-column * 8 + ($gutter) * 14;
+$base-column-9 				:$base-column * 9 + ($gutter) * 16;
+$base-column-10 			:$base-column * 10 + ($gutter) * 18;
+$base-column-11 			:$base-column * 11 + ($gutter) * 20;
+$base-column-12 			:$base-column * 12 + ($gutter) * 22; /* (54 *12) + (15 * 22) = 978 */
+
+/** Nexted Grid */
+/* 9 Column Nested Grid
+$base-column-9				:7.438016528926%; /* 54/726 */
+$gutter-9					:2.066115702479%; /* 15/726 */
+
+$base-column-9-2			:$base-column-9 * 2 + ($gutter-9);
+$base-column-9-3			:$base-column-9 * 3 + ($gutter-9) * 2; /*30.578512396694% /* 222/726 */
+$base-column-9-4			:$base-column-9 * 4 + ($gutter-9) * 3; /*42.148760330579%; */
+$base-column-9-5			:$base-column-9 * 5 + ($gutter-9) * 4; /* 53.719008264463%; */
+$base-column-9-6			:$base-column-9 * 6 + ($gutter-9) * 5; /* 65.289256198347%; */
+$base-column-9-7			:$base-column-9 * 7 + ($gutter-9) * 6; /* 76.859504132231%; */
+$base-column-9-8			:$base-column-9 * 8 + ($gutter-9) * 7; /* 88.429752066116; */
+$base-column-9-9			:$base-column-9 * 9 + ($gutter-9) * 8; /*  7.438016528926; */
+
+/*
+################################################
+02: Colour Palette
+################################################
+*/
+$primary-color-1:				#00a1de; /* Blue */
+$primary-color-2:				#34748c;
+$primary-color-3:				#004e6c; /* Darkest blue */
+$primary-color-4:				#5cccf7;
+$primary-color-5:				#a5e0f7; /* Lightest blue */
+$primary-color-6:				#EAF7FD; /*Nav blue */
+
+/* Secondary */
+$secondary-color-1:				#616365;
+$secondary-color-2:				#373a3c;
+$secondary-color-3:				#0b0d0f;
+$secondary-color-4:				#d2d5d7;
+$secondary-color-5:				#f2f2f2;
+
+/* Complimentary */
+$complimentary-color-1:			#ff8500;
+$complimentary-color-2:			#a08b4e;
+$complimentary-color-3:			#008435;
+$complimentary-color-4:			#aa3b17;
+$complimentary-color-5:			#fdc82f;
+$complimentary-color-6:			#fff;
+
+
+/*
+################################################
+03: Typography
+################################################
+*/
+/* Fonts available - USE minimally
+font-family:'FrutigerLTW01-45Light';
+font-family:'FrutigerLTW01-46LightIt';
+font-family:'FrutigerLTW01-47LightCn';
+font-family:'FrutigerLTW01-48LightCn';
+font-family:'FrutigerLTW01-55Roman';
+font-family:'FrutigerLTW01-56Italic';
+font-family:'FrutigerLTW01-57Condens';
+font-family:'FrutigerLTW01-58Condens';
+font-family:'Frutiger LT W01 65 Bold';
+font-family:'FrutigerLTW01-66BoldIta';
+font-family:'FrutigerLTW01-67BoldCn';
+font-family:'FrutigerLTW01-68BoldCnI';
+font-family:'FrutigerLTW01-75Black';
+font-family:'FrutigerLTW01-76BlackIt';
+font-family:'FrutigerLTW01-77BlackCn';
+font-family:'FrutigerLTW01-78BlackCn';
+font-family:'FrutigerLTW01-87ExtraBk';
+font-family:'FrutigerLTW01-88XBkCnIt';
+font-family:'FrutigerLTW01-95UltraBl';
+font-family:'FrutigerLTW20-45Light';
+font-family:'FrutigerLTW20-47LightCn';
+font-family:'FrutigerLTW20-55Roman';
+font-family:'Frutiger LT W20 57 Cn';
+font-family:'Frutiger LT W20 65 Bold';
+font-family:'FrutigerLTW20-67BoldCn';
+font-family:'FrutigerLTW20-75Black';
+font-family:'FrutigerLTW20-77BlackCn';
+*/
+
+
+$font-body:            		Helvetica, Arial, sans-serif;
+$font-header:			    'FrutigerLTW20-55Roman', Helvetica Neue, Arial, sans-serif;
+$base-unit:					3.375em; /* 54px */
+$base-half-unit:			1.375em; /* 22px */
+
+
+
+/*
+################################################
+04: UI & UX
+################################################
+*/
+$rounded-corners-small:		8px;
+$rounded-corners-medium:	12px;
+$rounded-corners-large:		16px;
+
+$fade-medium:				.7s;
+
