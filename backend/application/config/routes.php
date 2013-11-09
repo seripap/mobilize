@@ -41,6 +41,7 @@
 $route['default_controller'] = "auth";
 $route['register'] = "auth/register";
 $route['404_override'] = '';
+$route['directory'] = 'dir';
 
 
 /* End of file routes.php */
