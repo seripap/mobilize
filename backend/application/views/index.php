@@ -8,7 +8,7 @@ Contact hotline
 </div>
 
 <div>
-Contact Art
+<a href="index.php/chat">Contact Art</a>
 </div>
 
 <div>
@@ -21,9 +21,9 @@ Contact Matt Black
 
 <div>
 <ul>
-<li><a href="/">Chat</a></li>
-<li>Directory</li>
-<li><a href="auth/logout">logout</a></li>
+<li><a href="index.php/">Chat</a></li>
+<li><a href="index.php/dir">Directory</a></li>
+<li><a href="index.php/logout">logout</a></li>
 </ul>
 </div>
 
