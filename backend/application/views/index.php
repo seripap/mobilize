@@ -1,33 +1,31 @@
+<h1><?php echo lang('index_heading');?></h1>
+<p><?php echo lang('index_subheading');?></p>
 
-	<div class="wrapper main-content">
-		<section class="columns-12">
-		Logo
-		</section>
-		<section class="columns-12">
-<?php echo form_open("auth/login");?>
+<div id="infoMessage"><?php echo $message;?></div>
 
-  <p>
-    <?php echo lang('login_identity_label', 'identity');?>
-    <?php echo form_input($identity);?>
-  </p>
+<table cellpadding=0 cellspacing=10>
+	<tr>
+		<th><?php echo lang('index_fname_th');?></th>
+		<th><?php echo lang('index_lname_th');?></th>
+		<th><?php echo lang('index_email_th');?></th>
+		<th><?php echo lang('index_groups_th');?></th>
+		<th><?php echo lang('index_status_th');?></th>
+		<th><?php echo lang('index_action_th');?></th>
+	</tr>
+	<?php foreach ($users as $user):?>
+		<tr>
+			<td><?php echo $user->first_name;?></td>
+			<td><?php echo $user->last_name;?></td>
+			<td><?php echo $user->email;?></td>
+			<td>
+				<?php foreach ($user->groups as $group):?>
+					<?php echo anchor("auth/edit_group/".$group->id, $group->name) ;?><br />
+                <?php endforeach?>
+			</td>
+			<td><?php echo ($user->active) ? anchor("auth/deactivate/".$user->id, lang('index_active_link')) : anchor("auth/activate/". $user->id, lang('index_inactive_link'));?></td>
+			<td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
+		</tr>
+	<?php endforeach;?>
+</table>
 
-  <p>
-    <?php echo lang('login_password_label', 'password');?>
-    <?php echo form_input($password);?>
-  </p>
-
-  <p>
-    <?php echo lang('login_remember_label', 'remember');?>
-    <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
-  </p>
-
-
-  <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
-
-<?php echo form_close();?>
-
-<p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
-		</section>
-
-	</div>
-
+<p><?php echo anchor('auth/create_user', lang('index_create_user_link'))?> | <?php echo anchor('auth/create_group', lang('index_create_group_link'))?></p>
