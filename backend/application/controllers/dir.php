@@ -11,7 +11,7 @@ class dir extends CI_Controller {
 			$entries_query = $this->db->query('SELECT * FROM directory_entries where active=1 and cid = '.$cat->cid.' order by ord,id');
 			$entries[$cat->cid] = $entries_query->result();
 			foreach ($entries[$cat->cid] as $k => $entry) {
-				echo $entry->title."<br />";
+				//echo $entry->title."<br />";
 			}
 			
 		}
@@ -28,7 +28,7 @@ class dir extends CI_Controller {
 		$entries_query = $this->db->query('SELECT * FROM directory_entries where active=1 and cid = '.$cat.' order by ord,id');
 		$entries[$cat] = $entries_query->result();
 		foreach ($entries[$cat] as $k => $entry) {
-			echo $entry->title."<br />";
+			//echo $entry->title."<br />";
 		}
 		$data['json'] = $entries;
 	}
