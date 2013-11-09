@@ -1,0 +1,175 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../../html/fonts/icomoon.eot');
+	src:url('../../html/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../../html/fonts/icomoon.ttf') format('truetype'),
+		url('../../html/fonts/icomoon.woff') format('woff'),
+		url('../../html/fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cog:before {
+	content: "\e600";
+}
+.icon-phone:before {
+	content: "\e601";
+}
+.icon-cross:before {
+	content: "\e602";
+}
+.icon-key:before {
+	content: "\e603";
+}
+.icon-cord:before {
+	content: "\e604";
+}
+.icon-washing-machine:before {
+	content: "\e605";
+}
+.icon-microwave:before {
+	content: "\e606";
+}
+.icon-basket:before {
+	content: "\e607";
+}
+.icon-alarm:before {
+	content: "\e608";
+}
+.icon-alarm-clock:before {
+	content: "\e609";
+}
+.icon-wallet:before {
+	content: "\e60a";
+}
+.icon-calendar:before {
+	content: "\e60b";
+}
+.icon-umbrella:before {
+	content: "\e60c";
+}
+.icon-patch:before {
+	content: "\e60d";
+}
+.icon-lamp:before {
+	content: "\e60e";
+}
+.icon-diamond:before {
+	content: "\e60f";
+}
+.icon-cube:before {
+	content: "\e610";
+}
+.icon-box:before {
+	content: "\e611";
+}
+.icon-paint:before {
+	content: "\e612";
+}
+.icon-comments:before {
+	content: "\e613";
+}
+.icon-stats:before {
+	content: "\e614";
+}
+.icon-auction:before {
+	content: "\e615";
+}
+.icon-library:before {
+	content: "\e616";
+}
+.icon-calculator:before {
+	content: "\e617";
+}
+.icon-scissors:before {
+	content: "\e618";
+}
+.icon-edit:before {
+	content: "\e619";
+}
+.icon-dollar:before {
+	content: "\e61a";
+}
+.icon-pig:before {
+	content: "\e61b";
+}
+.icon-snow:before {
+	content: "\e61c";
+}
+.icon-male:before {
+	content: "\e61d";
+}
+.icon-female:before {
+	content: "\e61e";
+}
+.icon-heart:before {
+	content: "\e61f";
+}
+.icon-info:before {
+	content: "\e620";
+}
+.icon-plane:before {
+	content: "\e621";
+}
+.icon-bus:before {
+	content: "\e622";
+}
+.icon-bike:before {
+	content: "\e623";
+}
+.icon-car:before {
+	content: "\e624";
+}
+.icon-badge:before {
+	content: "\e625";
+}
+.icon-clipboard:before {
+	content: "\e626";
+}
+.icon-david-star:before {
+	content: "\e627";
+}
+.icon-moon-andstar:before {
+	content: "\e628";
+}
+.icon-envelope:before {
+	content: "\e629";
+}
+.icon-home:before {
+	content: "\e62a";
+}
+.icon-angle-left:before {
+	content: "\e62e";
+}
+.icon-angle-right:before {
+	content: "\e62f";
+}
+.icon-angle-up:before {
+	content: "\e630";
+}
+.icon-angle-down:before {
+	content: "\e631";
+}
+.icon-office:before {
+	content: "\e62b";
+}
+.icon-home2:before {
+	content: "\e62c";
+}
+.icon-cart:before {
+	content: "\e62d";
+}

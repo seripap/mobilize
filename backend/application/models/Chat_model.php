@@ -72,12 +72,6 @@ class Chat_model extends CI_Model {
 			$length++;
 		}
 
-		uasort($results,array($this,'sortFunction'));
-
-		echo "<pre>";
-		print_r($results);
-		die();
-
 		return array_reverse($results);
 	}
 
