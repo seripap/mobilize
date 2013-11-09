@@ -1,14 +1,7 @@
-<h1><? echo $title;?></h1>
-
-<ul> 
 <?
-foreach ($cats as $key => $cat) {
-	echo "<li>".
-	
-	 "<span class='actiion' id='".$cat->cid."' rel='".($cat->haskids ?  "getkids" :  "getentries")."'>".$cat->title . "".
-	
-	 "</li>";
-}
-
+echo "<script>var controller = 'dir';</script>"
 ?>
-</ul>
+<h1 id="dirtitle"><? echo $title;?></h1>
+<div id="dir_content">
+
+</div>
