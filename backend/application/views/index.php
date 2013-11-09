@@ -1,7 +1,7 @@
 <ul class="list indented users">
     <li>
         <div class="portrait-block">
-            <img src="../../html/images/lnf_contact.jpg" class="rounded">
+            <img src="/images/lnf_contact.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -18,7 +18,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="../../html/images/art.jpg" class="rounded">
+            <img src="/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <a href="chat/1">
@@ -37,7 +37,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="../../html/images/jason.jpg" class="rounded">
+            <img src="/images/jason.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -54,7 +54,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="../../html/images/justin.jpg" class="rounded">
+            <img src="/images/justin.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
