@@ -1,0 +1,443 @@
+/*
+########################
+Name: grid.css
+
+Description:
+Just the grid based on 978px.
+
+########################
+*/
+/*
+########################
+INDEX
+01: Grid Setup
+########################
+*/
+/*
+This file has EDITS
+*/
+/*
+################################################
+Name: variables.less
+
+Description:
+Contains all the Less variables used across all the stylesheets.
+
+################################################
+*/
+/*
+################################################
+INDEX
+
+02: Colour Palette
+03: Typography
+04: UI and UX
+05: Sprites/Background Images
+
+################################################
+*/
+/*
+################################################
+01: 978 Grid
+################################################
+*/
+/* Top level Layout */
+/* This is the width of all columns + all gutters */
+/* Padding of 15 on either side = 30 - Relative to Max Layout Width */
+/* 54 / 1008 - Relative to Max Layout Width */
+/* Base column + either side gutters */
+/* (54 *12) + (15 * 22) = 978 */
+/** Nexted Grid */
+              				                  /* 9 Column Nested Grid
+$base-column-9				:7.438016528926%; /* 54/726 */
+/* 15/726 */
+/*30.578512396694% /* 222/726 */
+/*42.148760330579%; */
+/* 53.719008264463%; */
+/* 65.289256198347%; */
+/* 76.859504132231%; */
+/* 88.429752066116; */
+/*  7.438016528926; */
+/*
+################################################
+02: Colour Palette
+################################################
+*/
+/* Blue */
+/* Darkest blue */
+/* Lightest blue */
+/*Nav blue */
+/* Secondary */
+/* Complimentary */
+/*
+################################################
+03: Typography
+################################################
+*/
+/* Fonts available - USE minimally
+font-family:'FrutigerLTW01-45Light';
+font-family:'FrutigerLTW01-46LightIt';
+font-family:'FrutigerLTW01-47LightCn';
+font-family:'FrutigerLTW01-48LightCn';
+font-family:'FrutigerLTW01-55Roman';
+font-family:'FrutigerLTW01-56Italic';
+font-family:'FrutigerLTW01-57Condens';
+font-family:'FrutigerLTW01-58Condens';
+font-family:'Frutiger LT W01 65 Bold';
+font-family:'FrutigerLTW01-66BoldIta';
+font-family:'FrutigerLTW01-67BoldCn';
+font-family:'FrutigerLTW01-68BoldCnI';
+font-family:'FrutigerLTW01-75Black';
+font-family:'FrutigerLTW01-76BlackIt';
+font-family:'FrutigerLTW01-77BlackCn';
+font-family:'FrutigerLTW01-78BlackCn';
+font-family:'FrutigerLTW01-87ExtraBk';
+font-family:'FrutigerLTW01-88XBkCnIt';
+font-family:'FrutigerLTW01-95UltraBl';
+font-family:'FrutigerLTW20-45Light';
+font-family:'FrutigerLTW20-47LightCn';
+font-family:'FrutigerLTW20-55Roman';
+font-family:'Frutiger LT W20 57 Cn';
+font-family:'Frutiger LT W20 65 Bold';
+font-family:'FrutigerLTW20-67BoldCn';
+font-family:'FrutigerLTW20-75Black';
+font-family:'FrutigerLTW20-77BlackCn';
+*/
+/* 54px */
+/* 22px */
+/*
+################################################
+04: UI & UX
+################################################
+*/
+/*
+################################################
+01: GRID SETUP FOR 978px
+################################################
+*/
+/* line 28, ../../compass/sass/grid.scss */
+.wrapper {
+  /* Sum of all columns (12) + all gutters*/
+  max-width: 1008px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 36, ../../compass/sass/grid.scss */
+.wrapper-full {
+  padding-bottom: 5px;
+}
+
+/* COLUMNS AND ROW S - FULL WIDTH ROW - TOP LEVEL */
+/* line 45, ../../compass/sass/grid.scss */
+.row,
+.row-9,
+.row-8,
+.row-4 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3.375em;
+}
+
+/* line 52, ../../compass/sass/grid.scss */
+.row-9-less {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.6875em;
+}
+
+/* line 61, ../../compass/sass/grid.scss */
+.row .grid,
+.image-list-3-cols li {
+  float: left;
+  margin: 0 1.4881%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 74, ../../compass/sass/grid.scss */
+.row:after,
+.row article:after,
+.row-9:after,
+.row-9 article:after,
+.row-4:after,
+.row-9 li:after {
+  content: "X";
+  display: block;
+  clear: both;
+  height: 0;
+  zoom: 1;
+  visibility: hidden;
+}
+
+/* line 85, ../../compass/sass/grid.scss */
+.columns-12 {
+  width: 97.02381%;
+}
+
+/* line 90, ../../compass/sass/grid.scss */
+.columns-11 {
+  width: 88.69048%;
+}
+
+/* line 95, ../../compass/sass/grid.scss */
+.columns-10 {
+  width: 80.35714%;
+}
+
+/* line 100, ../../compass/sass/grid.scss */
+.columns-9 {
+  width: 72.02381%;
+}
+
+/* line 105, ../../compass/sass/grid.scss */
+.columns-8 {
+  width: 63.69048%;
+}
+
+/* line 109, ../../compass/sass/grid.scss */
+.columns-7 {
+  width: 55.35714%;
+}
+
+/* line 114, ../../compass/sass/grid.scss */
+.columns-6 {
+  width: 47.02381%;
+}
+
+/* line 119, ../../compass/sass/grid.scss */
+.columns-5 {
+  width: 38.69048%;
+}
+
+/* line 124, ../../compass/sass/grid.scss */
+.columns-4 {
+  width: 30.35714%;
+}
+
+/* line 130, ../../compass/sass/grid.scss */
+.columns-3,
+.image-list-3-cols li {
+  width: 22.02381%;
+}
+
+/* line 135, ../../compass/sass/grid.scss */
+.columns-2 {
+  width: 13.69048%;
+}
+
+/* line 140, ../../compass/sass/grid.scss */
+.columns-1 {
+  width: 5.35714%;
+}
+
+/** LEVEL 2 ROWS AND COLUMNS */
+/*
+========================================
+NESTED 9 COLUMN GRID
+========================================
+*/
+/* line 152, ../../compass/sass/grid.scss */
+.row-9 .grid,
+.row-9-less .grid {
+  float: left;
+  margin: 0 2.066115702479%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 161, ../../compass/sass/grid.scss */
+.row-9 .grid:first-child,
+.row-9-less .grid:first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* line 168, ../../compass/sass/grid.scss */
+.row-9 > .grid:last-child,
+.row-9-less > .grid:last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 175, ../../compass/sass/grid.scss */
+.row-9 .columns-1,
+.row-9-less .columns-1 {
+  width: 7.438016528926%;
+}
+
+/* line 181, ../../compass/sass/grid.scss */
+.row-9 .columns-2,
+.row-9-less .columns-2 {
+  width: 19.00826446281%;
+}
+
+/* line 187, ../../compass/sass/grid.scss */
+.row-9 .columns-3,
+.row-9-less .columns-3 {
+  width: 30.578512396694%;
+}
+
+/* line 193, ../../compass/sass/grid.scss */
+.row-9 .columns-4,
+.row-9-less .columns-4 {
+  width: 42.148760330579%;
+}
+
+/* line 198, ../../compass/sass/grid.scss */
+.row-9 .columns-5, .row-9-less .columns-5 {
+  width: 53.719008264463%;
+}
+
+/* line 204, ../../compass/sass/grid.scss */
+.row-9 .columns-6,
+.row-9-less .columns-6 {
+  width: 65.289256198347%;
+}
+
+/* line 210, ../../compass/sass/grid.scss */
+.row-9 .columns-7,
+.row-9-less .columns-7 {
+  width: 76.859504132231%;
+}
+
+/* line 216, ../../compass/sass/grid.scss */
+.row-9 .columns-8,
+.row-9-less .columns-8 {
+  width: 87.190082644628%;
+}
+
+/* line 222, ../../compass/sass/grid.scss */
+.row-9 .columns-9,
+.row-9-less .columns-9 {
+  width: 100%;
+}
+
+/*
+========================================
+NESTED 8 COLUMN GRID
+========================================
+*/
+/* line 233, ../../compass/sass/grid.scss */
+.row-8 .grid {
+  float: left;
+  margin: 0 2.336448598131%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 241, ../../compass/sass/grid.scss */
+.row-8 .grid:first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* line 247, ../../compass/sass/grid.scss */
+.row-8 > .grid:last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 253, ../../compass/sass/grid.scss */
+.row-8 .columns-1 {
+  width: 8.411214953271%;
+}
+
+/* line 258, ../../compass/sass/grid.scss */
+.row-8 .columns-2 {
+  width: 21.495327102804%;
+}
+
+/* line 263, ../../compass/sass/grid.scss */
+.row-8 .columns-3 {
+  width: 34.579439252336%;
+}
+
+/* line 268, ../../compass/sass/grid.scss */
+.row-8 .columns-4 {
+  width: 46.417445482866%;
+}
+
+/* line 273, ../../compass/sass/grid.scss */
+.row-8 .columns-5 {
+  width: 59.345794392523%;
+}
+
+/* line 278, ../../compass/sass/grid.scss */
+.row-8 .columns-6 {
+  width: 73.831775700935%;
+}
+
+/* line 283, ../../compass/sass/grid.scss */
+.row-8 .columns-7 {
+  width: 86.915887850467%;
+}
+
+/* line 288, ../../compass/sass/grid.scss */
+.row-8 .columns-8 {
+  width: 100%;
+}
+
+/*
+========================================
+NESTED 4 COLUMN GRID
+========================================
+*/
+/* line 299, ../../compass/sass/grid.scss */
+.row-4 .grid {
+  float: left;
+  margin: 0 4.901960784314%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 307, ../../compass/sass/grid.scss */
+.row-4 .columns-1 {
+  width: 17.647058823529%;
+}
+
+/* line 312, ../../compass/sass/grid.scss */
+.row-4 .columns-2 {
+  width: 45.098039215686%;
+}
+
+/* line 317, ../../compass/sass/grid.scss */
+.row-4 .columns-3 {
+  width: 72.549019607843%;
+}
+
+/* line 322, ../../compass/sass/grid.scss */
+.row-4 .columns-4 {
+  width: 100%;
+}
+
+/* line 327, ../../compass/sass/grid.scss */
+.row-4 .grid:first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* line 333, ../../compass/sass/grid.scss */
+.row-4 > .grid:last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* */
+/* Lastly - removing margins from first and last DIVs */
+/* line 342, ../../compass/sass/grid.scss */
+article.first,
+.first {
+  margin-left: 0 !important;
+}
+
+/* line 347, ../../compass/sass/grid.scss */
+article.last,
+.last {
+  margin-right: 0 !important;
+}
+
+/* line 352, ../../compass/sass/grid.scss */
+.no-bottom-margin {
+  margin-bottom: 0;
+}

@@ -1,0 +1,441 @@
+@import 'variables.scss';
+/*
+################################################
+Name: branding.less
+
+Description:
+Sets brand consistency with fonts and colours.
+
+################################################
+*/
+
+/*
+################################################
+INDEX
+
+01: Colour Palette
+02: Web Fonts
+03: Font sizes
+04: Formatting
+05: SECTION SPECIFIC TYPE STYLES
+06: NESTED LIST STYLE
+
+################################################
+*/
+
+
+/*
+################################################
+01: Global Colour Palette
+################################################
+*/
+
+a,
+.current .subnav-item a,
+.current .sidebar-subnav a
+{
+	color:$primary-color-1;
+}
+
+a.cammo
+{
+	color:$secondary-color-1;
+}
+
+a:hover
+{
+	color:$primary-color-3;
+}
+
+.current,
+.current a
+{
+	color:$secondary-color-2;
+}
+
+.current .subnav-item-current a
+{
+	color:$secondary-color-1;
+}
+
+figure img
+{
+    display:inline-block;
+}
+
+/*
+################################################
+02: Web Fonts
+################################################
+*/
+
+
+
+/*
+################################################
+02: Font sizes
+################################################
+*/
+
+body
+{
+	font-size:100%;
+	font-family:$font-body;
+	color:$secondary-color-1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend
+{
+	margin:0;
+	font-family: $font-header;
+	text-rendering: optimizelegibility;
+	font-weight:normal;
+	color:$secondary-color-2;
+}
+
+h1
+{
+	font-size:2em;
+	margin-bottom:.25em;
+	padding:0;
+	line-height:2em;
+}
+
+.main-container h1
+{
+	margin-top:-.3em;
+	line-height:1.5em;
+}
+
+h2
+{
+	font-size:1.75em;
+	margin-bottom:10px;
+	line-height:1.75em;
+}
+
+.body-solutions h3{
+	line-height:1em !important;
+	margin-bottom:0.3em !important;
+}
+
+h3
+{
+	font-size:1.5em;
+	margin-bottom:0;
+	line-height:1.5em;
+}
+h3.module-header
+{
+	margin-bottom:($base-unit)/10;
+}
+
+h3.section-header
+{
+	margin-bottom:($base-unit)/4;
+}
+
+h4,
+li h4,
+legend
+{
+	font-size:1.25em;
+	margin-bottom:.2em;
+	line-height:1.25em;
+}
+
+h5
+{
+	font-size:1em;
+	line-height:1em;
+	margin-bottom:.2em;
+	color:$secondary-color-2;
+}
+
+h6
+{
+	font-size:.875em;
+	margin-bottom:10px;
+	line-height:.875em;
+}
+
+p
+{
+	font-size:.875em;
+	line-height:1.35em;
+	margin-bottom:$base-half-unit;
+}
+
+label
+{
+	font-size:.875em;
+	color:$secondary-color-2;
+}
+
+ul,
+ol
+{
+	padding: 0;
+	margin: 0 0 $base-half-unit 1.5em;
+}
+
+li
+{
+	font-size:.875em;
+	line-height:1.35em;
+	margin-bottom:.75em;
+}
+
+li p
+{
+	font-size:inherit;
+}
+
+li h4
+{
+	font-size:1.428em;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul,
+li li
+{
+	font-size:inherit;
+}
+
+
+dt {
+  font-weight: bold;
+}
+
+/* Headings in lists - use H4 - see the footer for example */
+.list-header
+{
+	margin-top:$base-half-unit;
+}
+
+.prettylist li
+{
+	padding:($base-unit)/4 0 ($base-unit)/4 ($base-unit)/2;
+	margin-bottom:0;
+	border-bottom:1px dotted $secondary-color-4;
+	list-style-type:none;
+	list-image:none;
+}
+
+.nobullets
+{
+	margin-left:0;
+	list-style-type:none;
+	list-style-image: none;
+}
+
+small
+{
+	font-size: 85%;
+}
+
+.fine-print
+{
+	font-size:.8em;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  border-left: 5px solid;
+}
+
+/* Lists with images and also titles */
+.image-list figure img
+{
+	display:block;
+}
+
+.image-list li
+{
+    display:inline-block;
+    float:none;
+    vertical-align:top;
+    padding-bottom:2em;
+}
+
+.image-list-meta
+{
+    font-size:.875em;
+    display:block;
+    text-align:center;
+    padding:.5em;
+}
+
+.image-list li:after
+{
+    content:"X";
+    display:block;
+    clear:both;
+    visibility: hidden;
+    height:0;
+    margin-bottom:3em;
+}
+
+.image-list-3-cols li
+{
+    float:none!important;
+}
+
+.image-list figure
+{
+    padding:1px;
+    background:#eee;
+}
+
+.image-list h4
+{
+    font-size:1.4em;
+}
+
+/* SECTION SPECIFIC TYPE */
+
+
+/*
+################################################
+03: Formatting
+################################################
+*/
+
+strong
+{
+	font-weight:bold;
+}
+
+em, i
+{
+	font-style:italic;
+}
+
+sup, sub
+{
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup
+{
+	top: -0.5em;
+}
+
+sub
+{
+	bottom: -0.25em;
+}
+
+abbr[title],
+abbr[data-original-title] {
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+
+.hor-list li
+{
+	float: left;
+	margin-right:$base-half-unit;
+}
+
+.sidebar-hor-list li {
+	float: left;
+}
+
+.sidebar-nav li
+{
+	border-bottom:1px dotted $secondary-color-4;
+	padding:0 0 0.5em 0;
+}
+
+.sidebar-subnav li
+{
+	padding:0;
+}
+
+/*
+################################################
+05: SECTION SPECIFIC STYLES
+################################################
+*/
+
+
+
+/*
+################################################
+06: NEST LIST STYLE
+################################################
+*/
+
+ul {
+    list-style-image: url("/global-assets/images/icon-bullet-16x16.png");
+    list-style-type: disc;
+
+}
+ul > li ul {
+    list-style-image: url("/global-assets/images/icon-bullet-level2-16x16.png");
+    list-style-type: disc;
+    margin-bottom:0;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+}
+ul ul, ol ul, ul ol, ol ol {
+    font-size: 1em;
+    margin-top: 0.75em;
+}
+nav ul, form ol {
+    list-style: none outside none;
+    padding: 0;
+}
+p, ul li, ol li {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+ul li, ol li {
+    margin-bottom: 0.5em;
+}
+
+/*
+CALL OUTS and HIGHLIGHTED CONTENT
+*/
+.highlighted-info
+{
+	padding:.5em;
+	/*border-radius:$rounded-corners-small;*/
+	transition:background-color 1s ease-in;
+	background:lighten($primary-color-5,8);
+}
+
+.highlighted-info h4
+{
+	margin-bottom:.5em;
+	padding-bottom:.35em;
+	border-bottom:1px solid $complimentary-color-6;
+}
+
+.highlighted-info li
+{
+	border-bottom:1px dotted $primary-color-5;
+}
+
+.highlighted-info:hover
+{
+	transition:background-color 1s ease-in;
+	background:lighten($primary-color-5,12);
+}

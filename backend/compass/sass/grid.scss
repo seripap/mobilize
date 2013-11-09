@@ -1,0 +1,354 @@
+/*
+########################
+Name: grid.css
+
+Description:
+Just the grid based on 978px.
+
+########################
+*/
+
+
+/*
+########################
+INDEX
+01: Grid Setup
+########################
+*/
+
+@import 'variables.scss';
+
+
+/*
+################################################
+01: GRID SETUP FOR 978px
+################################################
+*/
+.wrapper
+{
+	/* Sum of all columns (12) + all gutters*/
+	max-width: $max-layout-width;
+	margin:0 auto;
+	padding:0;
+}
+
+.wrapper-full
+{
+	padding-bottom:5px;
+}
+
+/* COLUMNS AND ROW S - FULL WIDTH ROW - TOP LEVEL */
+.row,
+.row-9,
+.row-8,
+.row-4
+{
+	display:inline-block;
+	width:100%;
+	margin-bottom:$base-unit;
+}
+
+.row-9-less
+{
+	display:inline-block;
+	width:100%;
+	margin-bottom:($base-unit)/2;
+}
+
+
+.row .grid,
+.image-list-3-cols li
+{
+	float:left;
+	margin:0 $gutter;
+	overflow:hidden;
+	display:inline-block;
+}
+
+.row:after,
+.row article:after,
+.row-9:after,
+.row-9 article:after,
+.row-4:after,
+.row-9 li:after
+{
+	content:"X";
+	display:block;
+	clear:both;
+	height:0;
+	zoom:1;
+	visibility:hidden;
+}
+
+
+.columns-12
+{
+	width:$base-column-12;
+}
+
+.columns-11
+{
+	width:$base-column-11;
+}
+
+.columns-10
+{
+	width:$base-column-10;
+}
+
+.columns-9
+{
+	width:$base-column-9;
+}
+
+.columns-8
+{
+	width:$base-column-8;
+}
+.columns-7
+{
+	width:$base-column-7;
+}
+
+.columns-6
+{
+	width:$base-column-6;
+}
+
+.columns-5
+{
+	width:$base-column-5;
+}
+
+.columns-4
+{
+	width:$base-column-4;
+}
+
+.columns-3,
+.image-list-3-cols li
+{
+	width:$base-column-3;
+}
+
+.columns-2
+{
+	width:$base-column-2;
+}
+
+.columns-1
+{
+	width:$base-column;
+}
+
+/** LEVEL 2 ROWS AND COLUMNS */
+/*
+========================================
+NESTED 9 COLUMN GRID
+========================================
+*/
+.row-9 .grid,
+.row-9-less .grid
+{
+    float:left;
+    margin:0 2.066115702479%;
+    overflow:hidden;
+    display:inline-block;
+}
+
+.row-9 .grid:first-child,
+.row-9-less .grid:first-child
+{
+	margin-top: 0!important;
+	margin-left: 0!important;
+}
+
+.row-9 > .grid:last-child,
+.row-9-less > .grid:last-child
+{
+	margin-bottom: 0!important;
+	margin-right: 0!important;
+}
+
+.row-9 .columns-1,
+.row-9-less .columns-1
+{
+	width:7.438016528926%;
+}
+
+.row-9 .columns-2,
+.row-9-less .columns-2
+{
+	width:19.00826446281%;
+}
+
+.row-9 .columns-3,
+.row-9-less .columns-3
+{
+	width:30.578512396694%;
+}
+
+.row-9 .columns-4,
+.row-9-less .columns-4
+{
+	width:42.148760330579%;
+}
+
+.row-9 .columns-5, .row-9-less .columns-5
+{
+	width:53.719008264463%;
+}
+
+.row-9 .columns-6,
+.row-9-less .columns-6
+{
+	width:65.289256198347%;
+}
+
+.row-9 .columns-7,
+.row-9-less .columns-7
+{
+	width:76.859504132231%;
+}
+
+.row-9 .columns-8,
+.row-9-less .columns-8
+{
+	width:87.190082644628%;
+}
+
+.row-9 .columns-9,
+.row-9-less .columns-9
+{
+	width:100%;
+}
+
+
+/*
+========================================
+NESTED 8 COLUMN GRID
+========================================
+*/
+.row-8 .grid
+{
+    float:left;
+    margin:0 2.336448598131%;
+    overflow:hidden;
+    display:inline-block;
+}
+
+.row-8 .grid:first-child
+{
+	margin-top: 0!important;
+	margin-left: 0!important;
+}
+
+.row-8 > .grid:last-child
+{
+	margin-bottom: 0!important;
+	margin-right: 0!important;
+}
+
+.row-8 .columns-1
+{
+	width:8.411214953271%;
+}
+
+.row-8 .columns-2
+{
+	width:21.495327102804%;
+}
+
+.row-8 .columns-3
+{
+	width:34.579439252336%;
+}
+
+.row-8 .columns-4
+{
+	width:46.417445482866%;
+}
+
+.row-8 .columns-5
+{
+	width:59.345794392523%;
+}
+
+.row-8 .columns-6
+{
+	width:73.831775700935%;
+}
+
+.row-8 .columns-7
+{
+	width:86.915887850467%;
+}
+
+.row-8 .columns-8
+{
+	width:100%;
+}
+
+/*
+========================================
+NESTED 4 COLUMN GRID
+========================================
+*/
+
+.row-4 .grid
+{
+    float:left;
+    margin:0 4.901960784314%;
+    overflow:hidden;
+    display:inline-block;
+}
+
+.row-4 .columns-1
+{
+	width:17.647058823529%;
+}
+
+.row-4 .columns-2
+{
+	width:45.098039215686%;
+}
+
+.row-4 .columns-3
+{
+	width:72.549019607843%;
+}
+
+.row-4 .columns-4
+{
+	width:100%;
+}
+
+.row-4 .grid:first-child
+{
+	margin-top: 0!important;
+	margin-left: 0!important;
+}
+
+.row-4 > .grid:last-child
+{
+	margin-bottom: 0!important;
+	margin-right: 0!important;
+}
+/* */
+
+/* Lastly - removing margins from first and last DIVs */
+article.first,
+.first
+{
+	margin-left:0!important;
+}
+article.last,
+.last
+{
+	margin-right:0!important;
+}
+
+.no-bottom-margin
+{
+	margin-bottom:0;
+}
