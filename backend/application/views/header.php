@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/screen.css">
 	<link rel="stylesheet" type="text/css" href="/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="/css/branding.css">
-  <script src="/js/jquery.min.js"></script>
+  <script src="http://local.o0h.org/js/jquery.min.js"></script>
+  <script src="http://local.o0h.org/js/segment.js"></script>
 </head>
 <body>
 	<div class="wrapper main-content">

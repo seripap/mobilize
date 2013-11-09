@@ -43,7 +43,7 @@ $route['login'] = "auth/login";
 $route['logout'] = "auth/logout";
 $route['register'] = "auth/register";
 $route['forgot'] = "auth/forgot_password";
-// $route['chat'] = "auth/chat";
+$route['chat/1'] = "chat";
 
 $route['404_override'] = '';
 $route['directory'] = 'dir';
