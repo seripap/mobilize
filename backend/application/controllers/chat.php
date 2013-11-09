@@ -8,33 +8,42 @@ class Chat extends CI_Controller {
 		$this->load->model('Chat_model');
 	}
 
-  /* The default function that gets called when visiting the page */
-  public function index() {
-  	$this->Chat_model->get_chat_from(1);
-  	$this->load->view('header');
-    $this->load->view('chat');
-    $this->load->view('footer');
-  }
+	/* The default function that gets called when visiting the page */
+	public function index() {
+		if (!$this->ion_auth->logged_in())
+		{
+			//redirect them to the login page
+			redirect('login', 'refresh');
+		} else {
+			$this->data['user'] = $this->ion_auth->user()->row();
+			$this->load->view('header');
+			$this->load->view('chat', $this->data);
+			$this->load->view('footer');
+		}
 
-  public function get_chats() {
+	}
 
-    /* Create a table if it doesn't exist already */
-    $this->Chat_model->create_table();
+	public function get_chats() {
 
-    echo json_encode($this->Chat_model->get_chat_after($_REQUEST["time"]));
-  }
+		/* Create a table if it doesn't exist already */
+		$this->Chat_model->create_table();
 
-  public function insert_chat() {
+		echo json_encode($this->Chat_model->get_chat_from($_REQUEST["userid"]));
+	}
 
-    /* Create a table if it doesn't exist already */
-    $this->Chat_model->create_table();
+	public function insert_chat() {
 
-    $this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"]);
-  }
+		/* Create a table if it doesn't exist already */
+		$this->Chat_model->create_table();
 
-  public function time() {
-    echo "[{\"time\":" +  time() + "}]";
-  }
+		$this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"]);
+
+		echo json_encode('done');
+	}
+
+	public function time() {
+		echo "[{\"time\":" +  time() + "}]";
+	}
 
 }
 
