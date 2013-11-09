@@ -15,6 +15,11 @@ p {
 	padding: 0;
 }
 
+h1.red {
+	color: #eb4a3f;
+	font-size: 25px;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -335,6 +340,22 @@ p.available {
 }
 p.unavailable {
 	background: #888;
+}
+
+// -------------------------
+// Context Block
+// -------------------------
+.context-wrapper {
+	display: block;
+	width: 100%;
+	padding: 15px;
+}
+.context-block {
+	display: block;
+	width: 100%;
+	border-radius: 7px;
+	padding: 15px;
+	background: #FFF;
 }
 
 
