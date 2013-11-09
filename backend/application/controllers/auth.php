@@ -785,6 +785,12 @@ class Auth extends CI_Controller {
 		$this->_render_page('edit_group', $this->data);
 	}
 
+	function chat() {
+		$this->data['user'] = $this->ion_auth->user()->row();
+
+		$this->_render_page('chat', $this->data);
+	}
+
 
 	function _get_csrf_nonce()
 	{
