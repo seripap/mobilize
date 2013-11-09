@@ -28,20 +28,48 @@ class Chat_model extends CI_Model {
 
 	function get_chat_from($userid)
 	{
-		$this->db->select('user_id')->from('users')->where('user_id',$userid)->join('users', 'id ='.$userid);
-		// $this->db->where('user_id', $userid)->order_by('time','DESC')->join('users', 'id ='.$userid);
+
+		$this->db->where('user_id', $userid)->order_by('time','DESC');
 		$query = $this->db->get('messages');
 
-		$results = array();
+		$results = [];
+
+		foreach ($query->result() as $row => $data)
+		{
+
+			foreach ($data as $key => $value) {
+				if ($key == 'user_id') {
+					$results[$row]['my_username'] = $this->get_username($value);
+				}
+
+				if ($key == 'to_user_id') {
+					$results[$row]['to_username'] = $this->get_username($value);
+				}
+
+				$results[$row][$key] = $value;
+			}
+
+			// if ($row == 'user_id') {
+			// 	$data = $this->get_username($data->user_id);
+			// }
+
+			// $results[$row] = $data; // = array($row->message,$row->time,$row->to_user_id);
+		}
+
+		// $results['username'] = $this->get_username($userid);
+
+		return array_reverse($results);
+	}
+
+	function get_username($userid) {
+		$this->db->where('id', $userid);
+		$query = $this->db->get('users');
 
 		foreach ($query->result() as $row)
 		{
-			$results[] = array($row->message,$row->time,$row->to_user_id);
+			return $row->username;
 		}
 
-		print_r($results);
-
-		return array_reverse($results);
 	}
 
 	function get_chat_after($time)
