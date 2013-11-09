@@ -1,4 +1,5 @@
-backend/compass/.sass-cache/*
+/backend/compass/.sass-cache/*
+/backend/application/config/database.php
 */config/database.php
 */config/development
 */logs/log-*.php
