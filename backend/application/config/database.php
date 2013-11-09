@@ -48,10 +48,16 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'tiny.com';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'compiler';
-$db['default']['database'] = 'hack';
+$db['default']['hostname'] = 'internal-db.s167143.gridserver.com';
+$db['default']['username'] = 'db167143_hack';
+$db['default']['password'] = 'Abc123456789!';
+$db['default']['database'] = 'db167143_hack';
+//Y
+
+// $db['default']['hostname'] = '127.0.0.1';
+// $db['default']['username'] = 'root';
+// $db['default']['password'] = 'dseripap';
+// $db['default']['database'] = 'hackathon';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
