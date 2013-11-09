@@ -113,7 +113,7 @@ button:focus {
 /* line 39, ../../compass/sass/screen.scss */
 .selectbox {
   overflow: hidden;
-  background: url(../images/down-arrow.jpg) no-repeat right white;
+  background: url(/images/down-arrow.jpg) no-repeat right white;
   border-radius: 7px;
   border: 0;
 }

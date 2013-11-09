@@ -28,9 +28,12 @@ class Chat_model extends CI_Model {
 
 	function get_chat_from($userid)
 	{
-
+		//SELECT * FROM messages, users WHERE messages.user_id = 3 AND users.id = messages.user_id
 		$this->db->where('user_id', $userid)->order_by('time','DESC');
 		$query = $this->db->get('messages');
+
+		$this->db->where('to_user_id', $userid)->order_by('time','DESC');
+		$query2 = $this->db->get('messages');
 
 		$results = [];
 
@@ -48,18 +51,34 @@ class Chat_model extends CI_Model {
 
 				$results[$row][$key] = $value;
 			}
-
-			// if ($row == 'user_id') {
-			// 	$data = $this->get_username($data->user_id);
-			// }
-
-			// $results[$row] = $data; // = array($row->message,$row->time,$row->to_user_id);
 		}
 
-		// $results['username'] = $this->get_username($userid);
+		$length = sizeof($results);
+
+		foreach ($query2->result() as $row2 => $data2)
+		{
+			foreach ($data2 as $key => $value) {
+
+				if ($key == 'user_id') {
+					$results[$row]['my_username'] = $this->get_username($value);
+				}
+
+				if ($key == 'to_user_id') {
+					$results[$row]['to_username'] = $this->get_username($value);
+				}
+
+				$results[$length][$key] = $value;
+			}
+			$length++;
+		}
 
 		return array_reverse($results);
 	}
+
+	private function sortFunction( $a, $b ) {
+	    return strtotime($a["time"]) - strtotime($b["time"]);
+	}
+
 
 	function get_username($userid) {
 		$this->db->where('id', $userid);
@@ -111,19 +130,20 @@ class Chat_model extends CI_Model {
 				),
 			'to_user_id' => array(
 				'type' => 'INT'
-				)
+				),
+			'conversation_id' => array(
+				'type' => 'INT'
+				),
 			);
 
 		/* Add the field before creating the table */
 		$this->dbforge->add_field($fields);
-
-
 		/* Specify the primary key to the 'id' field */
 		$this->dbforge->add_key('id', TRUE);
-
-
 		/* Create the table (if it doesn't already exist) */
 		$this->dbforge->create_table('messages', TRUE);
+
+
 	}
 
 
