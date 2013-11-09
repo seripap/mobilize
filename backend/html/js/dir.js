@@ -30,7 +30,9 @@ function write_cats (data){
 	$("#dir_content").html(html);
 	run_links();
 }
-
+function generaterow(id,rel,label,icon){
+var html ='<div class="icon-block left"><span class="icon"></span></div>';
+}
 function write_entries(data){
 	var html="";
 

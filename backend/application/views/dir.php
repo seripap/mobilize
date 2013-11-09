@@ -32,7 +32,7 @@ echo "<script>var controller = 'dir';</script>"
 <ul class="list indented directory">
 	<li>
 		<div class="icon-block left">
-			<span class="icon icon-home"></span>
+			<span class="icon"></span>
 		</div>
 		<div class="text-block">
 			<p class="title">Atlanta Day Shelter</p>
