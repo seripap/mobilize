@@ -16,16 +16,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/branding.css">
   <script src="../js/jquery.min.js"></script>
   <script src="../js/segment.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/icons.css">
+	<link rel="stylesheet" type="text/css" href="../css/icons.css">
 
-  <script src="/js/jquery.min.js"></script>
-   <script src="/js/main.js"></script>
- <? 
+   <script src="../js/main.js"></script>
+<!--  <?
 
  /*if( $this->router->fetch_class()==="dir"){
  	echo '<script src="/js/dir.js"></script>';
  }*/
-?>
+?> -->
 <script> init();</script>
 
 </head>
