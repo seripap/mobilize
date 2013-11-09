@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="ClipboardPlugin" version="0.1.0">
+    <name>ClipboardPlugin</name>
+    <author>ClipboardPlugin</author>
+    <description>ClipboardPlugin</description>
+    <keywords>ClipboardPlugin</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0" />
+    </engines>
+    <js-module src="www/clipboardPlugin.js" name="ClipboardPlugin">
+        <clobbers target="ClipboardPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ClipboardPlugin">
+                <param name="ios-package" value="ClipboardPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ClipboardPlugin.h" />
+        <source-file src="src/ios/ClipboardPlugin.m" />
+    </platform>
+</plugin>

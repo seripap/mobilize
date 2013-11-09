@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="SimpleLogger" version="0.1.0">
+    <name>SimpleLogger</name>
+    <author>SimpleLogger</author>
+    <description>SimpleLogger</description>
+    <keywords>SimpleLogger</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0" />
+    </engines>
+    <js-module src="www/SimpleLogger.js" name="SimpleLogger">
+        <clobbers target="SimpleLogger" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SimpleLogger">
+                <param name="ios-package" value="SimpleLogger" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SimpleLogger.h" />
+        <source-file src="src/ios/SimpleLogger.m" />
+    </platform>
+</plugin>
