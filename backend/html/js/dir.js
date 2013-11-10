@@ -9,7 +9,23 @@ $("#pagetitle").html('Services');
 	$.getJSON(remoteFile, function(data) {
 		console.log("cat json success");
 		write_cats(data);
-		
+		bodyScroll = new iScroll('wrapper-content', {
+			checkDOMChanges: true,
+			onBeforeScrollStart: function (e) {
+				var target = e.target;
+				while (target.nodeType != 1)
+				target =target.parentNode;
+
+				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+					e.preventDefault();
+				}
+			},
+			bounce:true,
+			momentum:true,
+			preventGhostClick:true
+		});
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	});
 }
 function write_cats (data){
