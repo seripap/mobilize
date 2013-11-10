@@ -97,6 +97,23 @@
         </div>
         </a>
     </li>
+
+    <li>
+        <div class="portrait-block">
+            <img src="http://o0h.org/images/jen.jpg" class="rounded">
+            <div class="bg-extension"></div>
+        </div>
+        <a href="http://local.o0h.org/index.php/chat/1">
+        <div class="block-wrapper">
+            <div class="block-table">
+                <div class="text-block">
+                    <p class="title" style="font-weight:bolder">Jennifer Smith</p>
+                    <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
 </ul>
 
 <?php } ?>
