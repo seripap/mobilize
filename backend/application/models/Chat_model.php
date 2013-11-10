@@ -122,8 +122,9 @@ class Chat_model extends CI_Model {
 		/* Create the table (if it doesn't already exist) */
 		$this->dbforge->create_table('messages', TRUE);
 
-
 	}
 
-
 }
+
+/* End of file Chat_model.php */
+/* Location: ./application/models/chat_model.php */
