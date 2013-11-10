@@ -10,6 +10,14 @@
       helperid = 1;
     }
 
+    var convertTime = function(timestamp) {
+      var date = new Date(timestamp*1000);
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      return hours + ':' + minutes + ':' + seconds;
+    }
+
     var updateTime = function (cb) {
       $.getJSON("http://local.o0h.org/index.php/chat/time", function (data) {
         cb(~~data);
@@ -50,26 +58,28 @@
           // $('#message_container').html(html);
 
           $.each(data, function() {
+            var time = convertTime(this.time);
+            console.log(time);
             if (this.to_user_id != userid) {
               html += ('<div class="message-wrapper">');
               html += ('<div class="name-block left">');
               html += ('<div class="name">');
-              html += ('<p id="1">'+this.my_username+'</p>');
+              html += ('<p>'+this.my_username+'</p>');
               html += ('</div></div>');
               html += ('<div class="message-block">');
               html += ('<div class="message me">');
-              html += ('<p id="1">'+this.message+'</p>');
+              html += ('<p><span style="color: #CCC; font-size: 0.6em;">'+time+'</span> '+this.message+'</p>');
               html += ('</div></div>');
               html += ('</div>');
             } else {
               html += ('<div class="message-wrapper">');
               html += ('<div class="message-block">');
               html += ('<div class="message me">');
-              html += ('<p id="1">'+this.message+'</p>');
+              html += ('<p><span style="color: #CCC; font-size: 0.6em;">'+time+'</span> '+this.message+'</p>');
               html += ('</div></div>');
               html += ('<div class="name-block right">');
               html += ('<div class="name">');
-              html += ('<p id="1">'+this.my_username+'</p>');
+              html += ('<p>'+this.my_username+'</p>');
               html += ('</div></div>');
               html += ('</div>');
             }

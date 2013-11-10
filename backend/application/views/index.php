@@ -82,7 +82,11 @@
             <?php if ($user->id > 3): ?>
                     <li>
         <div class="portrait-block">
+        <?php if ($user->img): ?>
+            <img src="<?php echo ($user->img);?>" class="rounded">
+        <?php else: ?>
             <img src="http://o0h.org/images/<?php echo strtolower($user->first_name);?>.jpg" class="rounded">
+        <?php endif; ?>
             <div class="bg-extension"></div>
         </div>
         <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id;?>">

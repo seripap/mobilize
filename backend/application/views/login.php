@@ -7,7 +7,7 @@
     <div class="icon-block facebook">
       <span class="icon icon-facebook"></span>
     </div>
-    <div class="title-block">
+    <div id="loginWithFB" class="title-block">
       <p class="title">Sign In with Facebook</p>
     </div>
   </div>
