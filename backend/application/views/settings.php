@@ -1,5 +1,10 @@
-<div class="context-wrapper" style="width: 320px;">
-    <div class="context-block" style="padding-top: 15px;">
-<p style="text-align: center;"><a href="http://o0h.org/index.php/logout">Logout</a></p>
-    </p></div>
-</div>
+<center>
+	<br/><br/>
+	<div class="login-button facebook">
+	    <div class="table-wrapper">
+	        <div class="title-block"> 
+	            <a href="http://o0h.org/index.php/logout" class="logout-btn">Logout</a>
+	        </div>
+	    </div>
+	</div>
+</center>
