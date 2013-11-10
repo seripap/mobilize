@@ -16,8 +16,9 @@ function write_cats (data){
 	set_parent = data[0].parent;
 	if(data[0].parent!=0){
 		console.log('parent !=0')
-		html+="<div>"+"<span class='action back' id='0' rel='getkids'>Back</span></div>";
-		
+		//html+="<div>"+"<span class='action back' id='0' rel='getkids'>Back</span></div>";
+		$('.back_btn').attr('rel',"getkids").attr('id','0');
+
 	}else{
 		console.log("parent else");
 		$("#pagetitle").html('Services');
@@ -52,8 +53,8 @@ return html;
 function write_entries(data){
 	var html="";
 $("#pagetitle").html(data[0].cattitle);
-	html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
-	
+	//html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
+	$('.back_btn').attr('rel',"getkids").attr('id',set_parent);
 	html += '<ul class="list indented directory">';
 
 	$(data).each(function(index,element){
@@ -71,8 +72,8 @@ function write_details(data){
 	console.log("write details");
 	var html="";
 $("#pagetitle").html(data[0].title);
-	html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
-	
+	//html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
+	$('.back_btn').attr('rel',"getentries").attr('id',data[0].cid);
 	html += '<ul class="list indented directory">';
 
 	var entry = new Array();

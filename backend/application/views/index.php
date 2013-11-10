@@ -5,6 +5,7 @@
             <img src="http://o0h.org/images/lnf_contact.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
+        <a href="tel:+16788567825">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -16,13 +17,14 @@
                 </div>
             </div>
         </div>
+        </a>
     </li>
     <li>
         <div class="portrait-block">
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="index.php/chat/1">
+        <a href="http://local.o0h.org/index.php/chat/1">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -74,19 +76,45 @@
 
 <?php } else { ?>
 
-<h1> Open conversations</h1>
+<ul class="list indented users">
 
-<?php
+    <li>
+        <div class="portrait-block">
+            <img src="http://o0h.org/images/matt.jpg" class="rounded">
+            <div class="bg-extension"></div>
+        </div>
+        <a href="http://local.o0h.org/index.php/chat/1">
+        <div class="block-wrapper">
+            <div class="block-table">
+                <div class="text-block">
+                    <p class="title" style="font-weight:bolder">Matt Black</p>
+                    <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
+                </div>
+                <div class="availability-block">
+                    <p class="unavailable">NEW</p>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
 
-
-foreach ($results as $key) {
-    foreach ($key as $k => $v) {
-        echo $k . " " . $v . " <br />";
-    }
-}
-
-
-?>
+    <li>
+        <div class="portrait-block">
+            <img src="http://o0h.org/images/jen.jpg" class="rounded">
+            <div class="bg-extension"></div>
+        </div>
+        <a href="http://local.o0h.org/index.php/chat/1">
+        <div class="block-wrapper">
+            <div class="block-table">
+                <div class="text-block">
+                    <p class="title" style="font-weight:bolder">Jennifer Smith</p>
+                    <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
 
 <?php } ?>
 <div id="infoMessage"><?php echo $message;?></div>
