@@ -395,7 +395,7 @@ footer ul li:hover {
 
 /* line 298, ../../compass/sass/screen.scss */
 ul.list {
-  display: block;
+  display: block !important;
   position: relative;
   margin: 0 auto;
   width: 100%;

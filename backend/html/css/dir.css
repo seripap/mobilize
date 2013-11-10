@@ -2,3 +2,7 @@
 
 	margin-left:25px;
 }
+ul.list.indented.directory, #dir_content{
+	display: block !important;
+	z-index: 1000 !important;
+}

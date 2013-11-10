@@ -4,6 +4,7 @@ var page_title = "";
 
 function dir_init (){
 $("#pagetitle").html('Services');
+	
 	var remoteFile = domain+"index.php/dir/getcats/0/json";
 	$.getJSON(remoteFile, function(data) {
 		console.log("cat json success");
@@ -35,7 +36,6 @@ function write_cats (data){
 	html += "</ul>";
 	
 		$("#dir_content").html(html);
-		
 	
 	run_links();
 }
@@ -80,14 +80,29 @@ $("#pagetitle").html(data[0].title);
 	var entrydata = data[0];
 
 	console.log(entrydata.desc);
+if(entrydata.phone.length==10){
+var patt1 = /(...)(...)(....)/i;
+var result = entrydata.phone.match(patt1);
+var p = result;
+var phonenum = p[1]+'-'+p[2]+'-'+p[3]
+}else if (entrydata.phone.length>10){
+	var patt1 = /(.)(...)(...)(....)/i;
+var result = entrydata.phone.match(patt1);
+var p = result;
+var phonenum = p[1]+'-'+p[2]+'-'+p[3]+'-'+p[4];
+}else {
 
-	html +="<li>"+"<span id='title' rel=''>"+entrydata.title + "</span></li>";
-	html +="<li><strong>Type: </strong>"+"<span id='cattitle' rel=''>"+entrydata.cattitle + "</span></li>";
-	html +="<li>"+"<span id='desc' rel=''>"+entrydata.desc + "</span></li>";
-	html +="<li>"+"<span id='phone' rel=''>"+entrydata.phone + "</span></li>";
-	html +="<li>"+"<span id='address' rel=''>"+entrydata.address + "</span></li>";
-	html +="<li>"+"<span id='url' rel=''>"+entrydata.url + "</span></li>";
-	html +="<li>"+"<span id='rating' rel=''>"+entrydata.rating + "</span></li>";
+	var phonenum = entrydata.phone;
+}
+
+entrydata.url = "<a href='http://"+entrydata.url+"'>"+entrydata.url+"</a>";
+	html +=(entrydata.title ? "<li>"+"<span id='title' rel=''>"+entrydata.title + "</span></li>": "");
+	html +=(entrydata.cattitle ? "<li><strong>Type: </strong>"+"<span id='cattitle' rel=''>"+entrydata.cattitle + "</span></li>": "");
+	html +=(entrydata.desc ? "<li>"+"<span id='desc' rel=''>"+entrydata.desc + "</span></li>": "");
+	html +=(phonenum ? "<li><strong>Call: </strong>"+"<span id='phone' rel=''>"+phonenum + "</span></li>": "");
+	html +=(entrydata.address ? "<li><strong>Address: </strong><br />"+"<span id='address' rel=''>"+entrydata.address + "</span></li>": "");
+	html +=(entrydata.url ? "<li><strong>Website: </strong>"+"<span id='url' rel=''>"+entrydata.url + "</span></li>": "");
+	html +=(entrydata.rating ? "<li><strong>Rating: </strong>"+"<span id='rating' rel=''>"+entrydata.rating + "</span></li>": "");
 	$("#dir_content").html(html);
 
 run_links();
