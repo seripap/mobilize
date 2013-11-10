@@ -25,7 +25,7 @@
 
 <body>
 	<div id="wrapper-container"> 
-		<!-- Project Header --> 
+		
 		<header>
 			<ul>
 				<li class="empty"><span class="action back_btn">back</span></li>
