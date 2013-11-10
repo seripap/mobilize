@@ -802,3 +802,8 @@ p.unavailable {
   background: #FFF;
   border-bottom: 1px solid #aaa;
 }
+
+/* line 649, ../../compass/sass/screen.scss */
+#loginWithFB {
+  cursor: pointer;
+}

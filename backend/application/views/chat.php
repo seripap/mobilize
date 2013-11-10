@@ -42,21 +42,6 @@
         console.debug(data);
         var html = '';
 
-          // $.each(data, function() {
-          //   if (this.to_user_id != userid) {
-          //     html += ('<div class="message_wrapper">');
-          //     html += ('<em id="1">'+this.my_username+'</em> - ');
-          //     html += ('<span id="1">'+this.message+'</span>');
-          //     html += ('</div>');
-          //   } else {
-          //     html += ('<div class="message_wrapper">');
-          //     html += ('<span>'+this.message+'</span>');
-          //     html += (' - <strong>'+this.my_username+'</strong> ');
-          //     html += ('</div>');
-          //   }
-          // });
-          // $('#message_container').html(html);
-
           $.each(data, function() {
             var time = convertTime(this.time);
             if (this.user_id != userid) {
@@ -86,6 +71,9 @@
             }
           });
           $('.chat-stream').html(html);
+
+          $('#wrapper-content').animate({scrollTop:$(document).height()}, 'slow');
+
         // reset scroll height
         // setTimeout(function(){
         //    $('#received').scrollTop($('#received')[0].scrollHeight);

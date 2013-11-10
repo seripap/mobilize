@@ -56,4 +56,8 @@ $(function() {
 		document.location = "http://local.o0h.org/index.php/about";
 	});
 
+	$('#loginWithFB').click(function() {
+		document.location = "http://local.o0h.org/index.php/oauth";
+	});
+
 });
