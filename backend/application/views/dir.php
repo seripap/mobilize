@@ -25,7 +25,6 @@ echo "<script>var controller = 'dir';</script>"
 		</select>
 	</div>
 </div>-->
-<h1 id="dirtitle"><? echo $title;?></h1>
 <div id="dir_content">
 
 </div>

@@ -3,20 +3,24 @@ var set_parent="";
 var page_title = "";
 
 function dir_init (){
-
+$("#pagetitle").html('Services');
 	var remoteFile = domain+"index.php/dir/getcats/0/json";
 	$.getJSON(remoteFile, function(data) {
 		console.log("cat json success");
 		write_cats(data);
-
+		
 	});
 }
 function write_cats (data){
 	var html="";
 	set_parent = data[0].parent;
 	if(data[0].parent!=0){
+		console.log('parent !=0')
 		html+="<div>"+"<span class='action back' id='0' rel='getkids'>Back</span></div>";
-
+		
+	}else{
+		console.log("parent else");
+		$("#pagetitle").html('Services');
 	}
 
 	html += '<ul class="list indented directory">';
@@ -25,7 +29,7 @@ function write_cats (data){
 
 		console.log(element.title+":"+element.haskids);
 		html += generaterow(element.cid,(element.haskids ?  "getkids" :  "getentries"),element.title);
-
+		
 	});
 	html += "</ul>";
 	
@@ -47,7 +51,7 @@ return html;
 }
 function write_entries(data){
 	var html="";
-
+$("#pagetitle").html(data[0].cattitle);
 	html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
 	
 	html += '<ul class="list indented directory">';
@@ -66,7 +70,7 @@ function write_entries(data){
 function write_details(data){
 	console.log("write details");
 	var html="";
-
+$("#pagetitle").html(data[0].title);
 	html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
 	
 	html += '<ul class="list indented directory">';
