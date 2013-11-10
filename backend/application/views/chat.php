@@ -17,7 +17,7 @@
     };
 
     var sendChat = function (message) {
-      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + helperid + "&convoid=" + convoid, function (){
+      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + 1 + "&convoid=" + convoid, function (){
         $('#message_container').html('');
         getNewChats();
       });
