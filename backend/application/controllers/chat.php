@@ -45,14 +45,17 @@ class Chat extends CI_Controller {
  $contents['alert'] = "New Message: ".$_REQUEST["message"];
  $extras = array();
 
- $extras['url']="https://Blah";
+ $extras['url']="/index.php/chat/".$_REQUEST["convoid"];
  $contents['extra'] = $extras;
  $notification = array();
  $notification['ios'] = $contents;
  $platform = array();
  array_push($platform, "ios");
+$user = $this->ion_auth->user()->row();
+$audience = array();
+$audience['device_token']= $user->deviceid;
 
- $push = array("audience"=>"all", "notification"=>$notification, "device_types"=>$platform);
+ $push = array("audience"=>$audience, "notification"=>$notification, "device_types"=>$platform);
 
 
 

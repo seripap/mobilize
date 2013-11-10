@@ -26,17 +26,25 @@ ditty.write("app loads");
         // Incoming message callback
 push.getIncoming(function (incoming) {
 if (incoming.message) {
-alert("Incoming push message: " + incoming.message);
 }
-if (incoming.extras) {
-alert(incoming.extras.url);
+if (incoming.extras.url) {
+window.open('http://local.o0h.org'+incoming.extras.url, '_blank');
 }
 });
-         var onPush = function(incoming) {
-           ditty.write("Received push: " + incoming.extras.a);
-           
-        }
-         push.registerEvent('push', onPush);
+push.registerEvent('push', function (incoming) {
+ window.open('http://local.o0h.org'+incoming.extras.url, '_blank');  
+});
+push.registerEvent('registration', function (error, id) {
+    if (error) {
+        console.log('There was an error registering for push notifications');
+    } else {
+        console.log("Registered with ID: " + id);
+    }
+});
+push.registerForNotificationTypes(push.notificationType.badge | push.notificationType.alert);
+
+
+//window.open('http://local.o0h.org/index.php/chat/5', '_blank');
         }
 
       // Initiates the UI and sets up any UI callbacks
