@@ -36,13 +36,15 @@
 
           $.each(data, function() {
             if (this.to_user_id != userid) {
+              html += ('<div class="message_wrapper">');
               html += ('<em id="1">'+this.my_username+'</em> - ');
               html += ('<span id="1">'+this.message+'</span>');
-              html += ('<br>');
+              html += ('</div>');
             } else {
+              html += ('<div class="message_wrapper">');
               html += ('<span>'+this.message+'</span>');
               html += (' - <strong>'+this.my_username+'</strong> ');
-              html += ('<br>');
+              html += ('</div>');
             }
           });
             $('#message_container').html(html);

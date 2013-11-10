@@ -78,16 +78,18 @@
 
 <ul class="list indented users">
 
-    <li>
+        <?php foreach ($users as $user):?>
+            <?php if ($user->id > 3): ?>
+                    <li>
         <div class="portrait-block">
-            <img src="http://o0h.org/images/matt.jpg" class="rounded">
+            <img src="http://o0h.org/images/<?php echo strtolower($user->first_name);?>.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/4">
+        <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id;?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
-                    <p class="title" style="font-weight:bolder">Matt Black</p>
+                    <p class="title" style="font-weight:bolder"><?php echo $user->first_name;?> <?php echo $user->last_name;?></p>
                     <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
                 </div>
                 <div class="availability-block">
@@ -97,23 +99,8 @@
         </div>
         </a>
     </li>
-
-    <li>
-        <div class="portrait-block">
-            <img src="http://o0h.org/images/jen.jpg" class="rounded">
-            <div class="bg-extension"></div>
-        </div>
-        <a href="http://local.o0h.org/index.php/chat/5">
-        <div class="block-wrapper">
-            <div class="block-table">
-                <div class="text-block">
-                    <p class="title" style="font-weight:bolder">Jennifer Smith</p>
-                    <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
+        <?php endif;?>
+        <?php endforeach;?>
 </ul>
 
 <?php } ?>
