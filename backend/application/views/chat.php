@@ -34,22 +34,47 @@
         console.debug(data);
         var html = '';
 
+          // $.each(data, function() {
+          //   if (this.to_user_id != userid) {
+          //     html += ('<div class="message_wrapper">');
+          //     html += ('<em id="1">'+this.my_username+'</em> - ');
+          //     html += ('<span id="1">'+this.message+'</span>');
+          //     html += ('</div>');
+          //   } else {
+          //     html += ('<div class="message_wrapper">');
+          //     html += ('<span>'+this.message+'</span>');
+          //     html += (' - <strong>'+this.my_username+'</strong> ');
+          //     html += ('</div>');
+          //   }
+          // });
+          // $('#message_container').html(html);
+
           $.each(data, function() {
             if (this.to_user_id != userid) {
               html += ('<div class="message_wrapper">');
-              html += ('<em id="1">'+this.my_username+'</em> - ');
-              html += ('<span id="1">'+this.message+'</span>');
+              html += ('<div class="name-block left">');
+              html += ('<div class="name">');
+              html += ('<p id="1">'+this.my_username+'</p>');
+              html += ('</div></div>');
+              html += ('<div class="message-block">');
+              html += ('<div class="message me">');
+              html += ('<p id="1">'+this.message+'</p>');
+              html += ('</div></div>');
               html += ('</div>');
             } else {
               html += ('<div class="message_wrapper">');
-              html += ('<span>'+this.message+'</span>');
-              html += (' - <strong>'+this.my_username+'</strong> ');
+              html += ('<div class="message-block">');
+              html += ('<div class="message me">');
+              html += ('<p id="1">'+this.message+'</p>');
+              html += ('</div></div>');
+              html += ('<div class="name-block left">');
+              html += ('<div class="name">');
+              html += ('<p id="1">'+this.my_username+'</p>');
+              html += ('</div></div>');
               html += ('</div>');
             }
           });
-            $('#message_container').html(html);
-
-
+          $('#message_container').html(html);
         // reset scroll height
         // setTimeout(function(){
         //    $('#received').scrollTop($('#received')[0].scrollHeight);
@@ -79,8 +104,7 @@
   <section id="message_container">
   </section>
 
-
-  <form>
-  	<input id="text" type="text" name="user">
-  	<input type="submit" value="Send">
+  <form class="chat-input">
+      <input id="text" type="text" name="user">
+      <input type="submit" value="Send">
   </form>
