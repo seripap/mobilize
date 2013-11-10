@@ -34,7 +34,7 @@
 		<header>
 			<ul>
 				<li class="empty"><span class="action back_btn icon icon-angle-left"></span></li>
-				<li id="pagetitle">Lost-n-Found [ATL]</li>
+				<li id="pagetitle"><img src="/images/header_logo.png" style="width:150px; padding-top:10px;"></li>
 				<li id="cog_nav">
 					<?php if (isset($user)): ?>
 					<span class="icon icon-cog"></span>
