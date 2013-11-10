@@ -165,8 +165,8 @@ p {
 
 h1.red {
 	color: #eb4a3f;
-	font-size: 25px;
-	padding: 10px 0;
+	font-size: 25px !important;
+	padding: 10px 0 !important;
 }
 
 input:focus,
@@ -650,11 +650,11 @@ p.unavailable {
 }
 .context-block li {
 	padding: 5px 10px;
-	list-style-type: disc;
+	list-style-type: disc !important;
 }
 .context-block p {
-	font-size: 16px;
-	line-height: 1.2em;
+	font-size: 16px !important;
+	line-height: 1.2em !important;
 }
 
 
