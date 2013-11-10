@@ -44,3 +44,4 @@
   <span>Need to retrieve your password? Get it <a href="http://local.o0h.org/index.php/forgot_password">here</a></span>
   </div>
 </div>
+<script>$(document).ready(function(){$('footer').hide();});</script>

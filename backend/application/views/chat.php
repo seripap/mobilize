@@ -123,3 +123,4 @@
       </div>
     </div>
   </section>
+  <script>$(document).ready(function(){$('footer').hide();});</script>
