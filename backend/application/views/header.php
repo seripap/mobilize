@@ -10,7 +10,7 @@
 	</script>
 	<meta charset="utf-8">
 	<title>Youth Help - LNF</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/screen.css">
   <script src="http://local.o0h.org/js/jquery.min.js"></script>
   <script src="http://local.o0h.org/js/segment.js"></script>
