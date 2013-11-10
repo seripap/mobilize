@@ -1,43 +1,74 @@
+
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            
-                        app.initialize();
-        </script>
-    </body>
+
+  <head>
+    <script>
+    (function(_,e,rr,s){_errs=[s];var
+c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+    c&&c.apply(this,a)};var b=function(){var
+c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+    c.src="http://beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+    _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+    (window,document,"script","5267368e0a2b9bf558000447");
+
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Phonegap Sample App</title>
+<script type="text/javascript" src="js/PushNotification.js"></script>
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript">
+
+      var onDeviceReady = function() {
+        var push = window.plugins.pushNotification;
+ditty.write("app loads");
+        // Incoming message callback
+push.getIncoming(function (incoming) {
+if (incoming.message) {
+alert("Incoming push message: " + incoming.message);
+}
+if (incoming.extras) {
+alert(incoming.extras.ios.url);
+}
+});
+         var onPush = function(incoming) {
+           ditty.write("Received push: " + incoming.extras.a);
+           
+        }
+         push.registerEvent('push', onPush);
+        }
+
+      // Initiates the UI and sets up any UI callbacks
+     
+
+      
+        // Update the interface with the current UA settings
+       
+
+      
+function onLoad(){
+       
+
+      document.addEventListener("deviceready", onDeviceReady);
+  }
+
+    </script>
+</head>
+  <body onload="onLoad()">
+  <div data-role="page" id="page">
+
+    <div data-role="header" class="ui-bar ui-bar-b">
+      <center>
+        <img border="0" src="img/logo.png" alt="Urban Airship" align="center" />
+      </center>
+    </div>
+
+    <div data-role="content">
+      
+    </div>
+
+  </div>
+</body>
 </html>
+ 
