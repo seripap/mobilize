@@ -26,14 +26,14 @@
 #define    kInAppBrowserTargetSystem @"_system"
 #define    kInAppBrowserTargetBlank @"_blank"
 
-#define    TOOLBAR_HEIGHT 44.0
+#define    TOOLBAR_HEIGHT 0
 #define    LOCATIONBAR_HEIGHT 21.0
 #define    FOOTER_HEIGHT ((TOOLBAR_HEIGHT) + (LOCATIONBAR_HEIGHT))
 
 #pragma mark CDVInAppBrowser
 
 @interface CDVInAppBrowser () {
-    UIStatusBarStyle _previousStatusBarStyle;
+    UIStatusBarStyle UIStatusBarStyleLightContent;
 }
 @end
 
@@ -116,7 +116,7 @@
         }
     }
 
-    _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+   // _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
 
     CDVInAppBrowserOptions* browserOptions = [CDVInAppBrowserOptions parseOptions:options];
     [self.inAppBrowserViewController showLocationBar:browserOptions.location];
@@ -174,7 +174,7 @@
     if ([self.inAppBrowserViewController isViewLoaded] && self.inAppBrowserViewController.view.window)
         return;
     
-    _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+   // _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
     
     UINavigationController* nav = [[UINavigationController alloc]
                                    initWithRootViewController:self.inAppBrowserViewController];
@@ -378,7 +378,7 @@
     self.inAppBrowserViewController = nil;
 
     if (IsAtLeastiOSVersion(@"7.0")) {
-        [[UIApplication sharedApplication] setStatusBarStyle:_previousStatusBarStyle];
+        //[[UIApplication sharedApplication] setStatusBarStyle:_previousStatusBarStyle];
     }
 }
 
@@ -448,12 +448,11 @@
     self.closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close)];
     self.closeButton.enabled = YES;
 
-    UIBarButtonItem* flexibleSpaceButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 
     UIBarButtonItem* fixedSpaceButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    fixedSpaceButton.width = 20;
+    fixedSpaceButton.width = 0;
 
-    self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, (self.view.bounds.size.height - TOOLBAR_HEIGHT), self.view.bounds.size.width, TOOLBAR_HEIGHT)];
+    self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, (self.view.bounds.size.height - TOOLBAR_HEIGHT), self.view.bounds.size.width, 0)];
     self.toolbar.alpha = 1.000;
     self.toolbar.autoresizesSubviews = YES;
     self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
@@ -502,7 +501,6 @@
     self.backButton.enabled = YES;
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
-    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
 
     self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.toolbar];
@@ -566,7 +564,7 @@
 
             // webView take up whole height less toolBar height
             CGRect webViewBounds = self.view.bounds;
-            webViewBounds.size.height -= TOOLBAR_HEIGHT;
+            
             self.webView.frame = webViewBounds;
         } else {
             // no toolBar, expand webView to screen dimensions
@@ -609,7 +607,7 @@
             // no locationBar, so put toolBar at the bottom
 
             CGRect webViewBounds = self.view.bounds;
-            webViewBounds.size.height -= TOOLBAR_HEIGHT;
+           
             self.webView.frame = webViewBounds;
 
             toolbarFrame.origin.y = webViewBounds.size.height;
