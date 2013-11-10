@@ -218,21 +218,36 @@ button:focus {
 .message_container {
 	height: 100%;
 }
+
+.message_container .inner-wrapper {
+	width: 100%;
+	max-width: 720px;
+}
+
+.chat-stream {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+}
+.chat-form {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
 .chat-input {
 	display: block;
 	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	max-width: 400px;
 	padding-top: 15px;
 }
-
 .chat-input input[type="text"]{
 	display: inline-block;
 	position: relative;
 	left: 0;
-	width: 300px;
+	width: 305px;
 	border-radius: 7px;
 	height: 40px;
 	font-size: 16px;

@@ -84,7 +84,7 @@
               html += ('</div>');
             }
           });
-          $('#message_container').html(html);
+          $('.chat-stream').html(html);
         // reset scroll height
         // setTimeout(function(){
         //    $('#received').scrollTop($('#received')[0].scrollHeight);
@@ -112,9 +112,14 @@
 </script>
 
   <section id="message_container">
+    <div class="inner-wrapper">
+      <div class="chat-stream">
+      </div>
+      <div class="chat-form">
+        <div class="chat-input">
+          <input id="text" type="text" name="user">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+    </div>
   </section>
-
-  <form class="chat-input">
-      <input id="text" type="text" name="user">
-      <input type="submit" value="Send">
-  </form>
