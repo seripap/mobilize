@@ -13,7 +13,7 @@
 
 	<script type="text/javascript" src="/js/iscroll.js"></script>
 	<script>
-		/*bodyScroll = new iScroll('wrapper-content', { 
+		bodyScroll = new iScroll('wrapper-content', { 
 			checkDOMChanges: true,
 			onBeforeScrollStart: function (e) {
 				var target = e.target;
@@ -29,7 +29,7 @@
 			preventGhostClick:true
 		});
 			
-		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);*/
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	</script>
 </body>
 </html>

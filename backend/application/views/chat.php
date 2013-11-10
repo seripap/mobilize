@@ -126,3 +126,4 @@
     </div>
     </form>
   </section>
+  <script>$(document).ready(function(){$('footer').hide();});</script>
