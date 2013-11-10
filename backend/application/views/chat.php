@@ -4,35 +4,10 @@
 
 		var time = 0;
     var helperid = $.segment(3);
-    var memData = '';;
+    var convoid = helperid;
 
     if (!helperid) {
       helperid = 1;
-    }
-
-    switch (userid) {
-      case 1:
-      helperid = 4;
-      convoid = 1;
-      break;
-
-      case 4:
-      helperid = 1;
-      convoid = 1;
-      break;
-
-      case 5:
-      convoid = 2;
-      break;
-
-      case 6:
-      convoid = 3;
-      break;
-
-      case 7:
-      convoid = 8;
-      break;
-
     }
 
     var updateTime = function (cb) {

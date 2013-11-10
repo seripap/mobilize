@@ -27,3 +27,34 @@
 
 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
 <p><a href="register">Register</a></p>
+
+
+<div class="logo fullsize">
+    <img src="/images/logo_red.png">
+</div>
+<br/><br/>
+<div class="login-button facebook">
+    <div class="table-wrapper">
+        <div class="icon-block facebook">
+            <span class="icon icon-facebook"></span>
+        </div>
+        <div class="title-block"> 
+            <p class="title">Sign In with Facebook</p>
+        </div>
+    </div>
+</div>
+<div class="login-button lnfaccount">
+    <div class="table-wrapper">
+        <div class="icon-block facebook">
+            <span class="icon icon-user"></span>
+        </div>
+        <div class="title-block"> 
+            <p class="title">Sign In with LnF Account</p>
+        </div>
+    </div>
+</div>
+<div class="register">
+    <span>No Account? Sign up <a href="#">here</a></span>
+    <br/>
+    <span>Need to retrieve your password? Get it <a href="#">here</a></span>
+</div>

@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 		else
 		{
 			//set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			// $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
 			// # single group (by name)
 			// $group = 'admin';
