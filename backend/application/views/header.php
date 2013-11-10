@@ -12,8 +12,6 @@
 	<title>Youth Help - LNF</title>
 
 	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/screen.css">
-	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/grid.css">
-	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/branding.css">
   <script src="http://local.o0h.org/js/jquery.min.js"></script>
   <script src="http://local.o0h.org/js/segment.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/icons.css">
@@ -23,18 +21,18 @@
 </head>
 
 <body>
-	<div id="wrapper-container"> 
-		<!-- Project Header --> 
+	<div id="wrapper-container">
+		<!-- Project Header -->
 		<header>
 			<ul>
 				<li class="empty"></li>
 				<li>Lost-n-Found [ATL]</li>
-				<li >
+				<li id="cog_nav">
 					<span class="icon icon-cog"></span>
 				</li>
 			</ul>
-		</header> 
- 
-		<!-- Project Content --> 
-		<div id="wrapper-content"> 
+		</header>
+
+		<!-- Project Content -->
+		<div id="wrapper-content">
 			<section id="load-content" attr="scrollMe">

@@ -1,12 +1,12 @@
-			</section> 
-		</div> 
- 
-		<!-- Project Footer --> 
+			</section>
+		</div>
+
+		<!-- Project Footer -->
 		<footer>
 			<ul>
-				<li>Chat</li>
+				<li><a href="http://local.o0h.org">Chat</a></li>
 				<li>Services</li>
-				<li>About</li>
+				<li><a href="http://local.o0h.org/index.php/about">About</a></li>
 			</ul>
 		</footer>
 	</div>

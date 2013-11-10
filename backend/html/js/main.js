@@ -7,6 +7,15 @@ function init(){
 			$.getScript('/js/dir.js', function(){
 				dir_init();
 			});
+		} else if (controller== "js") {
+			return;
 		}
 	});
 }
+
+
+$(function() {
+	$('#cog_nav').click(function() {
+		document.location = "http://local.o0h.org/index.php/settings";
+	});
+});
