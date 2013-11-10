@@ -1,17 +1,27 @@
 <div class="logo fullsize">
-  <img src="/images/logo_red.png">
+    <img src="/images/logo_red.png">
 </div>
 <br/><br/>
-<div class="login-button facebook">
-  <div class="table-wrapper">
-    <div class="icon-block facebook">
-      <span class="icon icon-facebook"></span>
+
+<div class="context-wrapper" style="width: 375px;">
+    <div class="context-block" style="padding-top: 15px;">
+        <p>Sign in with Facbeook below to chat directly with one of our volunteers and access our services directory, or call the help hotline directly <a href="tel:6788567826">here.</a>
     </div>
-    <div id="loginWithFB" class="title-block">
-      <p class="title">Sign In with Facebook</p>
-    </div>
-  </div>
 </div>
+<div class="login-button facebook">
+    <div class="table-wrapper">
+        <div class="icon-block facebook">
+            <span class="icon icon-facebook"></span>
+        </div>
+        <div id="loginWithFB" class="title-block"> 
+            <p class="title">Sign In with Facebook</p>
+        </div>
+    </div>
+</div>
+<div id="adminLogin" class="login-button">
+</div>
+
+<!--
 <div class="register">
 
 <center><div><?php echo $message;?></div>
@@ -44,4 +54,5 @@
   <span>Need to retrieve your password? Get it <a href="http://local.o0h.org/index.php/forgot_password">here</a></span>
   </div>
 </div>
+-->
 <script>$(document).ready(function(){$('footer').hide();});</script>
