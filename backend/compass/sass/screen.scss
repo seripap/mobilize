@@ -166,6 +166,7 @@ p {
 h1.red {
 	color: #eb4a3f;
 	font-size: 25px;
+	padding: 10px 0;
 }
 
 input:focus,
@@ -643,6 +644,10 @@ p.unavailable {
 	padding: 0 15px 15px 15px;
 	background: #FFF;
 	border-bottom: 1px solid #aaa;
+}
+.context-block li {
+	padding: 5px 0;
+	list-style-type: disc;
 }
 
 
