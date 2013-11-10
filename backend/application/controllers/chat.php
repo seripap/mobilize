@@ -34,9 +34,9 @@ class Chat extends CI_Controller {
 	public function insert_chat() {
 
 		/* Create a table if it doesn't exist already */
-		//$this->Chat_model->create_table();
+		$this->Chat_model->create_table();
 
-		//$this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"], $_REQUEST["convoid"]);
+		$this->Chat_model->insert_message($_REQUEST["message"], $_REQUEST["from"], $_REQUEST["to"], $_REQUEST["convoid"]);
  define('APPKEY','ES-nFtk6QBuHX7EEEPfW9A'); // Your App Key
  define('PUSHSECRET', '4QOndPlnRW688Np-laAxEg'); // Your Master Secret
  define('PUSHURL', 'https://go.urbanairship.com/api/push/');
