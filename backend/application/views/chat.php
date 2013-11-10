@@ -114,4 +114,9 @@
     </div>
   </form>
   </section>
-  <script>$(document).ready(function(){$('footer').hide();});</script>
+  <script>$(document).ready(function(){
+
+    $('#wrapper-content').removeClass('show-footer');
+    $('footer').hide();
+
+  });</script>
