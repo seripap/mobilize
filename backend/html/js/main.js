@@ -1,4 +1,4 @@
-var domain = "http://localhost/";
+var domain = "http://local.o0h.org/";
 
 function init() {
 
