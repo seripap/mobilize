@@ -1,4 +1,4 @@
-var domain = "http://localhost/";
+var domain = "http://"+window.location.hostname+"/";
 var controller = "";
 function init() {
 
@@ -46,6 +46,10 @@ $(function() {
 
 	$('#navAbout').click(function() {
 		document.location = "http://local.o0h.org/index.php/about";
+	});
+
+	$('#loginWithFB').click(function() {
+		document.location = "http://local.o0h.org/index.php/oauth"
 	});
 
 });

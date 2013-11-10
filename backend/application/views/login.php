@@ -7,7 +7,7 @@
     <div class="icon-block facebook">
       <span class="icon icon-facebook"></span>
     </div>
-    <div class="title-block">
+    <div id="loginWithFB" class="title-block">
       <p class="title">Sign In with Facebook</p>
     </div>
   </div>
@@ -44,3 +44,4 @@
   <span>Need to retrieve your password? Get it <a href="http://local.o0h.org/index.php/forgot_password">here</a></span>
   </div>
 </div>
+<script>$(document).ready(function(){$('footer').hide();});</script>

@@ -65,7 +65,7 @@ class Chat_model extends CI_Model {
 
 		foreach ($query->result() as $row)
 		{
-			return $row->username;
+			return $row->first_name;
 		}
 
 	}
