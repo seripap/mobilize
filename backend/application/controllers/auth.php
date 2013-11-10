@@ -46,25 +46,6 @@ class Auth extends CI_Controller {
 				$this->data['admin'] = TRUE;
 			}
 
-				$this->db->where('conversation_id', $this->data['user']->id)->order_by('time','DESC');
-				$query = $this->db->get('messages');
-
-				$this->data['results'] = [];
-
-				foreach ($query->result() as $row => $data)
-				{
-					foreach ($data as $key => $value) {
-						if ($key == 'user_id') {
-							$this->data['results'][$row]['my_username'] = $this->get_username($value);
-						}
-
-						if ($key == 'to_user_id') {
-							$this->data['results'][$row]['to_username'] = $this->get_username($value);
-						}
-
-						$this->data['results'][$row][$key] = $value;
-					}
-				}
 			$this->_render_page('index', $this->data);
 		}
 	}
