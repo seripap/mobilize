@@ -19,30 +19,43 @@ function write_cats (data){
 
 	}
 
-	html += "<ul>";
+	html += '<ul class="list indented directory">';
 	$(data).each(function(index, element){
 
 
 		console.log(element.title+":"+element.haskids);
-		html +="<li>"+"<span class='action' id='"+element.cid+"' rel='"+(element.haskids ?  "getkids" :  "getentries")+"'>"+element.title + "</span></li>";
+		html += generaterow(element.cid,(element.haskids ?  "getkids" :  "getentries"),element.title);
 
 	});
-	$("#dir_content").html(html);
+	html += "</ul>";
+	
+		$("#dir_content").html(html);
+		
+	
 	run_links();
 }
-function generaterow(id,rel,label,icon){
-var html ='<div class="icon-block left"><span class="icon"></span></div>';
+
+function generaterow(id,rel,label)
+{
+var html ='';
+html +="<li class='action' id='"+id+"' rel='"+rel+"'>";
+html+='<div class="icon-block left"><span class="icon"></span></div>';
+html +='<div class="text-block"><p class="title">'+label+'</p></div>';
+html +='<div class="icon-block right"><span class="icon icon-angle-right"></span></div>';
+html +='</li>';
+return html;
 }
 function write_entries(data){
 	var html="";
 
 	html+="<div>"+"<span class='action' id='"+set_parent+"' rel='getkids'>Back</span></div>";
 	
-	html +="<ul>";
+	html += '<ul class="list indented directory">';
 
 	$(data).each(function(index,element){
 		console.log(element.title+":"+element.id);
-		html +="<li>"+"<span class='action' id='"+element.id+"' rel='getdetails'>"+element.title + "</span></li>";
+		html += generaterow(element.id,"getdetails",element.title);
+		//html +="<li>"+"<span class='action' id='"+element.id+"' rel='getdetails'>"+element.title + "</span></li>";
 
 	});
 	$("#dir_content").html(html);
@@ -56,7 +69,8 @@ function write_details(data){
 
 	html+="<div>"+"<span class='action' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
 	
-	html +="<ul>";
+	html += '<ul class="list indented directory">';
+
 	var entry = new Array();
 	var entrydata = data[0];
 
@@ -86,15 +100,18 @@ function getdetails(id){
 }
 function run_links(){
 
-	$("span.action").each(function(index, element){
-
+	$(".action").each(function(index, element){
+		if($(element).attr("rel")!=""){
 		//console.log($(element).attr("rel"));
 		$(element).click(function(){		
 			console.log("click:"+$(element).attr("rel")+"("+element.id+")")
+			$("#dir_content").fadeOut(300,function(){
 			eval ($(element).attr("rel")+"("+element.id+")");
-
+			$("#dir_content").fadeIn(300);
+			});
+			
 		});
-
+}
 	});
 }
 

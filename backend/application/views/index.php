@@ -21,7 +21,7 @@
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/1">
+        <a href="chat/1">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">

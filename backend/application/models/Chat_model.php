@@ -17,23 +17,21 @@ class Chat_model extends CI_Model {
 	}
 
 
-	function insert_message($message, $userid, $tousername)
+	function insert_message($message, $userid, $tousername, $convoid)
 	{
 		$this->message = $message;
 		$this->time = time();
 		$this->user_id = $userid;
 		$this->to_user_id = $tousername;
+		$this->conversation_id = $convoid;
 		$this->db->insert('messages', $this);
 	}
 
-	function get_chat_from($userid)
+	function get_chat_from($convoid)
 	{
 		//SELECT * FROM messages, users WHERE messages.user_id = 3 AND users.id = messages.user_id
-		$this->db->where('user_id', $userid)->order_by('time','DESC');
+		$this->db->where('conversation_id', $convoid)->order_by('time','DESC');
 		$query = $this->db->get('messages');
-
-		$this->db->where('to_user_id', $userid)->order_by('time','DESC');
-		$query2 = $this->db->get('messages');
 
 		$results = [];
 
@@ -51,25 +49,6 @@ class Chat_model extends CI_Model {
 
 				$results[$row][$key] = $value;
 			}
-		}
-
-		$length = sizeof($results);
-
-		foreach ($query2->result() as $row2 => $data2)
-		{
-			foreach ($data2 as $key => $value) {
-
-				if ($key == 'user_id') {
-					$results[$row]['my_username'] = $this->get_username($value);
-				}
-
-				if ($key == 'to_user_id') {
-					$results[$row]['to_username'] = $this->get_username($value);
-				}
-
-				$results[$length][$key] = $value;
-			}
-			$length++;
 		}
 
 		return array_reverse($results);

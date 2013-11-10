@@ -11,21 +11,15 @@
 	<meta charset="utf-8">
 	<title>Youth Help - LNF</title>
 
-	<link rel="stylesheet" type="text/css" href="/css/screen.css">
-	<link rel="stylesheet" type="text/css" href="/css/grid.css">
-	<link rel="stylesheet" type="text/css" href="/css/branding.css">
-	<link rel="stylesheet" type="text/css" href="/css/icons.css">
+	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/screen.css">
+	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/branding.css">
+  <script src="http://local.o0h.org/js/jquery.min.js"></script>
+  <script src="http://local.o0h.org/js/segment.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/icons.css">
 
-  	<script src="/js/jquery.min.js"></script>
-  	<script src="/js/segment.js"></script>
-	<script src="/js/jquery.min.js"></script>
-   	<script src="/js/main.js"></script>
-	<? 
-	 /*if( $this->router->fetch_class()==="dir"){
-	 	echo '<script src="/js/dir.js"></script>';
-	 }*/
-	?>
-	<script> init();</script>
+   <script src="http://local.o0h.org/js/main.js"></script>
+<script> init();</script>
 </head>
 
 <body>
