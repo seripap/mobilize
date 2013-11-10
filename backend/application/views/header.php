@@ -13,12 +13,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/screen.css">
-  <script src="http://local.o0h.org/js/jquery.min.js"></script>
-  <script src="http://local.o0h.org/js/segment.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/icons.css">
-<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/dir.css">
-   <script src="http://local.o0h.org/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://o0h.org/css/screen.css">
+  <script src="http://o0h.org/js/jquery.min.js"></script>
+  <script src="http://o0h.org/js/segment.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://o0h.org/css/icons.css">
+<link rel="stylesheet" type="text/css" href="http://o0h.org/css/dir.css">
+   <script src="http://o0h.org/js/main.js"></script>
 <script> init();</script>
 </head>
 
@@ -29,9 +29,11 @@
 			<ul>
 				<li class="empty"><span class="action back_btn">back</span></li>
 				<li id="pagetitle">Lost-n-Found [ATL]</li>
+				<?php if (isset($user)): ?>
 				<li id="cog_nav">
 					<span class="icon icon-cog"></span>
 				</li>
+			<?php endif; ?>
 			</ul>
 		</header>
 

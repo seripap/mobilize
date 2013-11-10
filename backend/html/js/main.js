@@ -27,29 +27,45 @@ function init() {
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 		}
+		if(!$.segment(2)){
+
+			$('.back_btn').hide();
+		}else{
+
+			if($.segment(2)=="login"){
+$('.back_btn').hide();
+			}else{
+	$('.back_btn').click(function(){window.location=domain+"index.php";});
+	}
+		}
 	});
 }
 
 
 $(function() {
 	$('#cog_nav').click(function() {
-		document.location = "http://local.o0h.org/index.php/settings";
+		document.location = "http://o0h.org/index.php/settings";
 	});
 
 	$('#navChat').click(function() {
-		document.location = "http://local.o0h.org";
+		document.location = "http://o0h.org";
 	});
 
 	$('#navServices').click(function() {
-		document.location = "http://local.o0h.org/index.php/dir";
+		document.location = "http://o0h.org/index.php/dir";
 	});
 
 	$('#navAbout').click(function() {
-		document.location = "http://local.o0h.org/index.php/about";
+		document.location = "http://o0h.org/index.php/about";
 	});
 
 	$('#loginWithFB').click(function() {
-		document.location = "http://local.o0h.org/index.php/oauth"
+		$('#loginWithFB').html('');
+		var cl = new CanvasLoader('loginWithFB');
+		cl.setDiameter(17); // default is 40
+		cl.setRange(0.4); // default is 1.3
+		cl.show(); // Hidden by default
+		document.location = "http://o0h.org/index.php/oauth";
 	});
 
 });

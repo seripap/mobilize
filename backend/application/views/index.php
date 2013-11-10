@@ -1,3 +1,4 @@
+
 <?php if (!$admin) { ?>
 <ul class="list indented users">
     <li>
@@ -24,7 +25,7 @@
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id; ?>">
+        <a href="http://o0h.org/index.php/chat/<?php echo $user->id; ?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -89,7 +90,7 @@
         <?php endif; ?>
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id;?>">
+        <a href="http://o0h.org/index.php/chat/<?php echo $user->id;?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">

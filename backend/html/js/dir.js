@@ -39,6 +39,8 @@ function write_cats (data){
 	}else{
 		console.log("parent else");
 		$("#pagetitle").html('Services');
+		$('.back_btn').attr('rel',"unbind").attr('id','');
+		
 	}
 
 	html += '<ul class="list indented directory">';
@@ -135,9 +137,11 @@ function getdetails(id){
 	});
 }
 function run_links(){
-
+$('.back_btn').unbind('click');
 	$(".action").each(function(index, element){
+		
 		if($(element).attr("rel")!=""){
+
 		//console.log($(element).attr("rel"));
 		$(element).click(function(){		
 			console.log("click:"+$(element).attr("rel")+"("+element.id+")")
@@ -148,8 +152,18 @@ function run_links(){
 			
 		});
 }
+
+
 	});
+if($('.back_btn').attr("rel")=="unbind"){
+	$('.back_btn').unbind('click');
+	$('.back_btn').attr('rel','');
+	$('.back_btn').click(function(){window.location=domain+"index.php";});
+
 }
+}
+
+
 
 function getkids(parent){
 	console.log("getkids");

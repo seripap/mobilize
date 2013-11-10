@@ -19,13 +19,13 @@
     }
 
     var updateTime = function (cb) {
-      $.getJSON("http://local.o0h.org/index.php/chat/time", function (data) {
+      $.getJSON("http://o0h.org/index.php/chat/time", function (data) {
         cb(~~data);
       });
     };
 
     var sendChat = function (message) {
-      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + 1 + "&convoid=" + convoid, function (){
+      $.getJSON("http://o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + 1 + "&convoid=" + convoid, function (){
         $('#message_container').html('');
         getNewChats();
       });
@@ -38,24 +38,9 @@
     }
 
     var getNewChats = function () {
-      $.getJSON("http://local.o0h.org/index.php/chat/get_chats?convoid=" + convoid, function (data){
+      $.getJSON("http://o0h.org/index.php/chat/get_chats?convoid=" + convoid, function (data){
         console.debug(data);
         var html = '';
-
-          // $.each(data, function() {
-          //   if (this.to_user_id != userid) {
-          //     html += ('<div class="message_wrapper">');
-          //     html += ('<em id="1">'+this.my_username+'</em> - ');
-          //     html += ('<span id="1">'+this.message+'</span>');
-          //     html += ('</div>');
-          //   } else {
-          //     html += ('<div class="message_wrapper">');
-          //     html += ('<span>'+this.message+'</span>');
-          //     html += (' - <strong>'+this.my_username+'</strong> ');
-          //     html += ('</div>');
-          //   }
-          // });
-          // $('#message_container').html(html);
 
           $.each(data, function() {
             var time = convertTime(this.time);
@@ -86,6 +71,9 @@
             }
           });
           $('.chat-stream').html(html);
+
+          $('#wrapper-content').animate({scrollTop:$(document).height()}, 'slow');
+
         // reset scroll height
         // setTimeout(function(){
         //    $('#received').scrollTop($('#received')[0].scrollHeight);
@@ -126,4 +114,4 @@
     </div>
   </form>
   </section>
-  <script>$(document).ready(function(){$('footer').hide();});</script>
+  <script>$(document).ready(function(){$('footer').show();});</script>
