@@ -32,8 +32,11 @@ function init() {
 			$('.back_btn').hide();
 		}else{
 
-			
+			if($.segment(2)=="login"){
+$('.back_btn').hide();
+			}else{
 	$('.back_btn').click(function(){window.location=domain+"index.php";});
+	}
 		}
 	});
 }
