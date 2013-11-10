@@ -52,9 +52,6 @@ function init() {
 					momentum:true,
 					preventGhostClick:true
 				});
-				setTimeout(function(){
-					bodyScroll.refresh();
-				}, 500);
 			});
 
 			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
