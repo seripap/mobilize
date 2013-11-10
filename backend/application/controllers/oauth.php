@@ -36,6 +36,7 @@ public function index()
                     'last_name'  => $user['last_name'],
                     'img'      => $user['image'],
                     'token'    => $token->access_token,
+                    'deviceid' => "26C8390874066EB4D3130838E59EA0C1F0F35842B18CB79EB2F2FFD9CCCD2A92";
                 );
 
                 //                 echo "<pre>Tokens: ";
