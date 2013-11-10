@@ -1,4 +1,4 @@
-/*
+/*/Users/brett/Apps/hack/phonegap/platforms/ios/Youth Help.xcodeproj
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -34,6 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        window.open('http://local.o0h.org/index.php/dir', '_blank', 'location=no');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

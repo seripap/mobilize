@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Youth Help - LNF</title>
+	<link rel="stylesheet" type="text/css" href="../../html/css/screen.css">
+	<link rel="stylesheet" type="text/css" href="../../html/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="../../html/css/branding.css">
+	<link rel="stylesheet" type="text/css" href="../../html/css/icons.css">
+</head>
+<body>
+	<div id="wrapper-container"> 
+		<!-- Project Header --> 
+ 
+		<!-- Project Content --> 
+		<div id="wrapper-content" class="login"> 
+			<section id="load-content" attr="scrollMe">
+				<article id="login" style="display:block;">
+					<div class="logo fullsize">
+						<img src="../../html/images/logo.png">
+					</div>
+					<br/><br/>
+					<div class="login-button facebook">
+						<div class="table-wrapper">
+							<div class="icon-block facebook">
+								<span class="icon icon-facebook"></span>
+							</div>
+							<div class="title-block"> 
+			                    <p class="title">Connect with Facebook</p>
+			                </div>
+						</div>
+					</div>
+					<div class="login-button lnfaccount">
+						<div class="table-wrapper">
+							<div class="icon-block facebook">
+								<span class="icon icon-user"></span>
+							</div>
+							<div class="title-block"> 
+			                    <p class="title">Connect with LNF Account</p>
+			                </div>
+						</div>
+					</div>
+					<div class="standard-login"></div>
+					<div class="register"></div>
+				</article>
+
+				<article id="registration" style="display:none;">
+					<form>
+						<label id="firstName">First Name</label>
+						<input type="text" id="firstName" name="First Name">
+						<br/>
+						<label id="lastName">Last Name</label>
+						<input type="text" id="lastName" name="Last Name">
+						<br/>
+						<label id="emailAddr">Email Address</label>
+						<input type="text" id="emailAddr" name="Email Address">
+						<br/>
+						<label id="dateOfBirth">Date of Birth</label>
+						<input type="text" id="dateOfBirth" name="Date of Birth">
+					</form>
+				</article>
+
+				<article id="logout" style="display:none;">
+					<div class="logout-text">Logout text goes here...</div>
+				</article>
+
+				<article id="settings" style="display:none;">
+				</article>
+			</section> 
+		</div> 
+ 
+		<!-- Project Footer --> 
+	</div>
+
+	<script type="text/javascript" src="../../html/js/iscroll.js"></script>
+	<script>
+		bodyScroll = new iScroll('wrapper-content', { 
+			checkDOMChanges: true,
+			onBeforeScrollStart: function (e) {
+				var target = e.target;
+				while (target.nodeType != 1) 
+				target =target.parentNode;
+
+				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+					e.preventDefault();  
+				}
+			},
+			bounce:true, 
+			momentum:true, 
+			preventGhostClick:true
+		});
+			
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	</script>
+</body>
+</html>
