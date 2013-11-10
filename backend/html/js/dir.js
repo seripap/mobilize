@@ -40,7 +40,7 @@ function write_cats (data){
 		console.log("parent else");
 		//$("#pagetitle").html('Services');
 		$('.back_btn').attr('rel',"unbind").attr('id','');
-		
+
 	}
 
 	html += '<ul class="list indented directory">';
@@ -49,12 +49,12 @@ function write_cats (data){
 
 		console.log(element.title+":"+element.haskids);
 		html += generaterow(element.cid,(element.haskids ?  "getkids" :  "getentries"),element.title);
-		
+
 	});
 	html += "</ul>";
-	
+
 		$("#dir_content").html(html);
-	
+
 	run_links();
 }
 
@@ -70,7 +70,7 @@ return html;
 }
 function write_entries(data){
 	var html="";
-//$("#pagetitle").html(data[0].cattitle);
+// $("#pagetitle").html(data[0].cattitle);
 	//html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
 	$('.back_btn').attr('rel',"getkids").attr('id',set_parent);
 	html += '<ul class="list indented directory">';
@@ -89,7 +89,7 @@ function write_entries(data){
 function write_details(data){
 	console.log("write details");
 	var html="";
-//$("#pagetitle").html(data[0].title);
+// $("#pagetitle").html(data[0].title);
 	//html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
 	$('.back_btn').attr('rel',"getentries").attr('id',data[0].cid);
 	html += '<ul class="list indented directory">';
@@ -139,17 +139,18 @@ function getdetails(id){
 function run_links(){
 $('.back_btn').unbind('click');
 	$(".action").each(function(index, element){
-		
+
 		if($(element).attr("rel")!=""){
 
 		//console.log($(element).attr("rel"));
-		$(element).click(function(){		
+		$(element).click(function(){
 			console.log("click:"+$(element).attr("rel")+"("+element.id+")")
-			$("#dir_content").fadeOut(300,function(){
+			$("#dir_content").fadeOut(200,function(){
+				$("#dir_content").html('');
 			eval ($(element).attr("rel")+"("+element.id+")");
-			$("#dir_content").fadeIn(300);
+			$("#dir_content").fadeIn();
 			});
-			
+
 		});
 }
 
