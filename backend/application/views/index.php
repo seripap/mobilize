@@ -81,8 +81,8 @@
 
         <?php foreach ($users as $user):?>
             <?php if ($user->id > 3): ?>
-                    <li>
-        <div id="content_<?php echo $user->id; ?>" class="portrait-block">
+                    <li id="content_<?php echo $user->id; ?>">
+        <div class="portrait-block">
         <?php if ($user->img): ?>
             <img src="https://graph.facebook.com/me/picture?type=normal&access_token=<?php echo ($user->token);?>" height="112" width="112" class="rounded">
         <?php else: ?>
