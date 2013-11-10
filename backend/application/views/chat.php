@@ -19,13 +19,13 @@
     }
 
     var updateTime = function (cb) {
-      $.getJSON("http://local.o0h.org/index.php/chat/time", function (data) {
+      $.getJSON("http://o0h.org/index.php/chat/time", function (data) {
         cb(~~data);
       });
     };
 
     var sendChat = function (message) {
-      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + 1 + "&convoid=" + convoid, function (){
+      $.getJSON("http://o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + 1 + "&convoid=" + convoid, function (){
         $('#message_container').html('');
         getNewChats();
       });
@@ -38,7 +38,7 @@
     }
 
     var getNewChats = function () {
-      $.getJSON("http://local.o0h.org/index.php/chat/get_chats?convoid=" + convoid, function (data){
+      $.getJSON("http://o0h.org/index.php/chat/get_chats?convoid=" + convoid, function (data){
         console.debug(data);
         var html = '';
 

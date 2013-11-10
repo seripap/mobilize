@@ -28,11 +28,11 @@ push.getIncoming(function (incoming) {
 if (incoming.message) {
 }
 if (incoming.extras.url) {
-window.open('http://local.o0h.org'+incoming.extras.url, '_blank');
+window.open('http://o0h.org'+incoming.extras.url, '_blank');
 }
 });
 push.registerEvent('push', function (incoming) {
- window.open('http://local.o0h.org'+incoming.extras.url, '_blank');  
+ window.open('http://o0h.org'+incoming.extras.url, '_blank');  
 });
 push.registerEvent('registration', function (error, id) {
     if (error) {
