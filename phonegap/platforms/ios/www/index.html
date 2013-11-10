@@ -28,11 +28,12 @@ push.getIncoming(function (incoming) {
 if (incoming.message) {
 }
 if (incoming.extras.url) {
-window.open('http://o0h.org'+incoming.extras.url, 'pop-up');
+//alert('http://o0h.org'+incoming.extras.url);
+window.open('http://o0h.org'+incoming.extras.url, 'popup');
 }
 });
 push.registerEvent('push', function (incoming) {
- window.open('http://o0h.org'+incoming.extras.url, 'pop-up');  
+ window.open('http://o0h.org'+incoming.extras.url, 'popup');  
 });
 push.registerEvent('registration', function (error, id) {
     if (error) {
@@ -43,8 +44,8 @@ push.registerEvent('registration', function (error, id) {
 });
 push.registerForNotificationTypes(push.notificationType.badge | push.notificationType.alert);
 
+window.open('http://o0h.org', '_blank');
 
-window.open('http://o0h.org/index.php', 'pop-up');
         }
 
       // Initiates the UI and sets up any UI callbacks
