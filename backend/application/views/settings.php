@@ -1,9 +1,9 @@
 <center>
 	<br/><br/>
-	<div class="login-button lnfaccount">
+	<div class="login-button facebook">
 	    <div class="table-wrapper">
 	        <div class="title-block"> 
-	            <a href="http://o0h.org/index.php/logout" style="color:white; text-decoration:none; text-align: center;">Logout</a>
+	            <a href="http://o0h.org/index.php/logout" class="logout-btn">Logout</a>
 	        </div>
 	    </div>
 	</div>
