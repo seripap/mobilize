@@ -33,7 +33,7 @@ class Chat_model extends CI_Model {
 		$this->db->where('conversation_id', $convoid)->order_by('time','DESC');
 		$query = $this->db->get('messages');
 
-		$results = [];
+		// $results = [];
 
 		foreach ($query->result() as $row => $data)
 		{
@@ -126,5 +126,5 @@ class Chat_model extends CI_Model {
 
 }
 
-/* End of file Chat_model.php */
+/* End of file chat_model.php */
 /* Location: ./application/models/chat_model.php */
