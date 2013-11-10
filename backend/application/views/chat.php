@@ -65,16 +65,16 @@
               html += ('<div class="message-wrapper">');
               html += ('<div class="message-block">');
               html += ('<div class="message me">');
-              html += ('<p id="1">'+this.message+'</p>');
+              html += ('<p>'+this.message+'</p>');
               html += ('</div></div>');
               html += ('<div class="name-block right">');
               html += ('<div class="name">');
-              html += ('<p id="1">'+this.my_username+'</p>');
+              html += ('<p>'+this.my_username+'</p>');
               html += ('</div></div>');
               html += ('</div>');
             }
           });
-          $('#message_container').html(html);
+          $('.chat-stream').html(html);
         // reset scroll height
         // setTimeout(function(){
         //    $('#received').scrollTop($('#received')[0].scrollHeight);
@@ -102,9 +102,14 @@
 </script>
 
   <section id="message_container">
+    <div class="inner-wrapper">
+      <div class="chat-stream">
+      </div>
+      <div class="chat-form">
+        <div class="chat-input">
+          <input id="text" type="text" name="user">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+    </div>
   </section>
-
-  <form class="chat-input">
-      <input id="text" type="text" name="user">
-      <input type="submit" value="Send">
-  </form>
