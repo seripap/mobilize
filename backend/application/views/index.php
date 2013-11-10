@@ -24,7 +24,7 @@
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/1">
+        <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id; ?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -83,7 +83,7 @@
             <img src="http://o0h.org/images/matt.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/1">
+        <a href="http://local.o0h.org/index.php/chat/4">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -103,7 +103,7 @@
             <img src="http://o0h.org/images/jen.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://local.o0h.org/index.php/chat/1">
+        <a href="http://local.o0h.org/index.php/chat/5">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -117,4 +117,3 @@
 </ul>
 
 <?php } ?>
-<div id="infoMessage"><?php echo $message;?></div>
