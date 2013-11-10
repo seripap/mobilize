@@ -13,21 +13,28 @@ i.restore();++b}}else{m(this.cont,{width:g,height:g});m(this.vml,{width:g,height
 a.hide=function(){typeof this.timer==="number"&&(clearInterval(this.timer),delete this.timer,m(this.cont,{display:"none"}))};a.kill=function(){var a=this.cont;typeof this.timer==="number"&&this.hide();o===p[0]?(a.removeChild(this.can),a.removeChild(this.cCan)):a.removeChild(this.vml);for(var c in this)delete this[c]};w.CanvasLoader=k})(window);
 </script>
 <div class="logo fullsize">
-  <img src="/images/logo_red.png">
+    <img src="/images/logo_red.png">
 </div>
 <br/><br/>
-<span id="loginWithFB" style="text-align: center;">
-<div class="login-button facebook">
-  <div class="table-wrapper">
-    <div class="icon-block facebook">
-      <span class="icon icon-facebook"></span>
+<div class="context-wrapper" style="width: 375px;">
+    <div class="context-block" style="padding-top: 15px;">
+        <p>Sign in with Facbeook below to chat directly with one of our volunteers and access our services directory, or call the help hotline directly <a href="tel:6788567826">here.</a>
     </div>
-    <div class="title-block">
-      <p class="title">Sign In with Facebook</p>
-    </div>
-  </div>
 </div>
-</span>
+<div class="login-button facebook">
+    <div class="table-wrapper">
+        <div class="icon-block facebook">
+            <span class="icon icon-facebook"></span>
+        </div>
+        <div id="loginWithFB" class="title-block"> 
+            <p class="title">Sign In with Facebook</p>
+        </div>
+    </div>
+</div>
+<div id="adminLogin" class="login-button">
+</div>
+
+<!--
 <div class="register">
 
 <center><div><?php echo $message;?></div>
@@ -60,4 +67,5 @@ a.hide=function(){typeof this.timer==="number"&&(clearInterval(this.timer),delet
   <span>Need to retrieve your password? Get it <a href="http://o0h.org/index.php/forgot_password">here</a></span>
   </div>
 </div>
+-->
 <script>$(document).ready(function(){$('footer').hide();});</script>
