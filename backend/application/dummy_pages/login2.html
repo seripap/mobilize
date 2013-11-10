@@ -13,7 +13,7 @@
 		<!-- Project Header --> 
  
 		<!-- Project Content --> 
-		<div id="wrapper-content" class="login"> 
+		<div id="wrapper-content" class="show-footer"> 
 			<section id="load-content" attr="scrollMe">
 				<article id="login" style="display:none;">
 					<div class="logo fullsize">
@@ -47,21 +47,60 @@
 					</div>
 				</article>
 
-				<article id="registration" style="display:none;">
-					<form>
-						<label id="firstName">First Name</label>
-						<input type="text" id="firstName" name="First Name">
-						<br/>
-						<label id="lastName">Last Name</label>
-						<input type="text" id="lastName" name="Last Name">
-						<br/>
-						<label id="emailAddr">Email Address</label>
-						<input type="text" id="emailAddr" name="Email Address">
-						<br/>
-						<label id="dateOfBirth">Date of Birth</label>
-						<input type="text" id="dateOfBirth" name="Date of Birth">
+				<article id="registration" style="display:block;">
+					<form class="registration-form">
+						<div class="registration-wrapper">
+							<div class="label-block">
+								<label id="firstName">First Name</label>
+							</div>
+							<div class="input-block">
+								<input type="text" id="firstName" name="First Name">
+							</div>
+						</div>
+						<div class="registration-wrapper">
+							<div class="label-block">
+								<label id="lastName">Last Name</label>
+							</div>
+							<div class="input-block">
+								<input type="text" id="lastName" name="Last Name">
+							</div>
+						</div>
+						<div class="registration-wrapper">
+							<div class="label-block">
+								<label id="emailAddr">Email Address</label>
+							</div>
+							<div class="input-block">
+								<input type="text" id="emailAddr" name="Email Address">
+							</div>
+						</div>
+						<div class="registration-wrapper">
+							<div class="label-block">
+								<label id="dob">Date of Birth</label>
+							</div>
+							<div class="input-block">
+								<input type="text" id="dob" name="Date of Birth">
+							</div>
+						</div>
+						<div class="chat-form">
+					        <div class="chat-input">
+					          	<input type="submit" value="Send" style="position:relative; display:block; float:right; right: 15px;">
+					        </div>
+					    </div>
 					</form>
+
 				</article>
+
+				<!-- <label id="firstName">First Name</label>
+				<input type="text" id="firstName" name="First Name">
+				<br/>
+				<label id="lastName">Last Name</label>
+				<input type="text" id="lastName" name="Last Name">
+				<br/>
+				<label id="emailAddr">Email Address</label>
+				<input type="text" id="emailAddr" name="Email Address">
+				<br/>
+				<label id="dateOfBirth">Date of Birth</label>
+				<input type="text" id="dateOfBirth" name="Date of Birth"> -->
 
 				<article id="logout" style="display:none;">
 					<div class="logout-text">Logout text goes here...</div>
@@ -69,58 +108,7 @@
 
 				<article id="settings" style="display:none;">
 				</article>
-
-				<article id="message_container" style="display:block">
-					<div "inner-wrapper">
-						<div class="chat-stream">
-							<div class="message-wrapper">
-								<div class="name-block left">
-									<div class="name">
-										<p>Art</p>
-									</div>
-								</div>
-								<div class="message-block">
-									<div class="message me">
-										<p>Hey there! This is some text that I'm writing to you to test this space!</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="message-wrapper">
-								<div class="message-block">
-									<div class="message">
-										<p>My name is Dan and I suck.</p>
-									</div>
-								</div>
-								<div class="name-block right">
-									<div class="name">
-										<p>Dan</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="message-wrapper">
-								<div class="name-block left">
-									<div class="name">
-										<p>Art</p>
-									</div>
-								</div>
-								<div class="message-block">
-									<div class="message me">
-										<p>I'm sorry to hear that, Dan. That makes me sad in the face.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="chat-form">
-							<div class="chat-input">
-								<input id="text" type="text" name="user">
-								<input type="submit" value="Send">
-							</div>
-						</div>
-					</div>
-				</article>
-			</section> 
+			</section>
 		</div> 
  
 		<!-- Project Footer --> 

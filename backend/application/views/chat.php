@@ -102,6 +102,7 @@
 </script>
 
   <section id="message_container">
+    <form>
     <div class="inner-wrapper">
       <div class="chat-stream">
       </div>
@@ -112,4 +113,5 @@
         </div>
       </div>
     </div>
+  </form>
   </section>
