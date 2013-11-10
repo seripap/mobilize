@@ -19,7 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="http://local.o0h.org/css/icons.css">
 
    <script src="http://local.o0h.org/js/main.js"></script>
-
+<script> init();</script>
 </head>
 <body>
 	<div class="wrapper main-content">
