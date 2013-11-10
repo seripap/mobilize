@@ -16,7 +16,7 @@
 		// Fix for Search page scrolling up and getting stuck on iPad -->
 		$('input').focus(rePos(this));
 		function rePos(element){
-			window.scrollTo(0, '50px');
+			window.scrollTo(0, 1);
 		}
 	</script>
 </body>
