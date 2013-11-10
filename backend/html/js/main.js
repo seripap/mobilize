@@ -61,11 +61,17 @@ $(function() {
 
 	$('#loginWithFB').click(function() {
 		$('#loginWithFB').html('');
+		$('#loginWithFB').css('text-align','center');
 		var cl = new CanvasLoader('loginWithFB');
+		cl.setColor("#FFFFFF");
 		cl.setDiameter(17); // default is 40
 		cl.setRange(0.4); // default is 1.3
 		cl.show(); // Hidden by default
 		document.location = "http://o0h.org/index.php/oauth";
+	});
+
+	$('#adminLogin').click(function() {
+		document.location = "http://o0h.org/index.php/adminlogin";
 	});
 
 });
