@@ -36,5 +36,5 @@
 		</header>
 
 		<!-- Project Content -->
-		<div id="wrapper-content">
+		<div id="wrapper-content"<?php if (isset($user)) { echo ' class="show-footer"'; } ?>>
 			<section id="load-content" attr="scrollMe">

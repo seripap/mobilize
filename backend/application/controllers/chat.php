@@ -16,7 +16,7 @@ class Chat extends CI_Controller {
 			redirect('login', 'refresh');
 		} else {
 			$this->data['user'] = $this->ion_auth->user()->row();
-			$this->load->view('header');
+			$this->load->view('header', $this->data);
 			$this->load->view('chat', $this->data);
 			$this->load->view('footer');
 		}
@@ -83,7 +83,7 @@ echo $json ."<br/ >";
 
  curl_close($session);
 
-		
+
 	}
 
 	public function time() {

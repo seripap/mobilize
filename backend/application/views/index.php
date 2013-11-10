@@ -96,9 +96,9 @@
                     <p class="title" style="font-weight:bolder"><?php echo $user->first_name;?> <?php echo $user->last_name;?></p>
                     <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
                 </div>
-                <div class="availability-block">
+                <!--div class="availability-block">
                     <p class="unavailable">NEW</p>
-                </div>
+                </div -->
             </div>
         </div>
         </a>

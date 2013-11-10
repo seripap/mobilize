@@ -7,7 +7,7 @@ class dir extends CI_Controller {
 		$data["echo"] = "Jennifer's awesome";
 		$data['cats'] = $this->getcats();
 
-		
+
 		$data['title'] = "Services";
 		$this->_render_page("dir", $data);
 		//$this->load->view('view/directory', $data, FALSE);
@@ -29,22 +29,22 @@ foreach ($catname as $key => $cat) {
 return  $cat->title;
 }
 	}
-	
+
 	public function getcats($parent = 0, $format="data")
 	{
-		
+
 		$cats_query = $this->db->query('SELECT * FROM directory_cat where active=1 and parent='.$parent.' order by ord,cid asc;');
 		$cats = $cats_query->result();
 		$entries = array();
 		foreach ($cats as $key => $cat) {
 			$cats[$key]->haskids = $this->haskids($cat->cid);
-			
+
 			$entries_query = $this->db->query('SELECT * FROM directory_entries where active=1 and cid = '.$cat->cid.' order by ord,id');
 			$entries[$cat->cid] = $entries_query->result();
 			foreach ($entries[$cat->cid] as $k => $entry) {
 				//echo $entry->title."<br />";
 			}
-			
+
 		}
 		$data['json'] = $cats;
 		if($format ==="json"){
@@ -104,7 +104,7 @@ return  $cat->title;
 
 		$this->viewdata = (empty($data)) ? $this->data: $data;
 
-		$this->load->view('header');
+		$this->load->view('header', $this->viewdata);
 		$view_html = $this->load->view($view, $this->viewdata, $render);
 		$this->load->view('footer');
 

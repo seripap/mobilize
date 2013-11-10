@@ -113,7 +113,7 @@
 </script>
 
   <section id="message_container">
-  <form>
+    <form>
     <div class="inner-wrapper">
       <div class="chat-stream">
       </div>
@@ -124,6 +124,6 @@
         </div>
       </div>
     </div>
-    </form>
+  </form>
   </section>
   <script>$(document).ready(function(){$('footer').show();});</script>
