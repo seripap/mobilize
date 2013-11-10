@@ -27,13 +27,13 @@
 		<!-- Project Header -->
 		<header>
 			<ul>
-				<li class="empty"><span class="action back_btn">back</span></li>
+				<li class="empty"><span class="action back_btn icon icon-angle-left"></span></li>
 				<li id="pagetitle">Lost-n-Found [ATL]</li>
-				<?php if (isset($user)): ?>
 				<li id="cog_nav">
+					<?php if (isset($user)): ?>
 					<span class="icon icon-cog"></span>
+					<?php endif; ?>
 				</li>
-			<?php endif; ?>
 			</ul>
 		</header>
 
