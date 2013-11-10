@@ -29,7 +29,7 @@ if (incoming.message) {
 alert("Incoming push message: " + incoming.message);
 }
 if (incoming.extras) {
-alert(incoming.extras.ios.url);
+alert(incoming.extras.url);
 }
 });
          var onPush = function(incoming) {
