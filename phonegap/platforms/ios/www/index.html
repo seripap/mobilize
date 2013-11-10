@@ -21,10 +21,11 @@ c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
     <script type="text/javascript">
 
       var onDeviceReady = function() {
-        var mywindow = window.open('http://o0h.org', '_blank');
-        setTimeout(mywindow.close(),3000);
-setTimeout(mywindow.open('http://o0h.org/index.php/chat/9','_blank'),2000);
-        initpush();
+        //window.open('http://o0h.org', '_blank');
+
+      var ref = window.open('http://o0h.org', '_blank', 'location=yes');
+ref.addEventListener('loadstop', function(event) { initpush(); });
+        //initpush();
        
         }
 function initpush(){
@@ -36,12 +37,12 @@ if (incoming.message) {
 }
 if (incoming.extras.url) {
 //alert('http://o0h.org'+incoming.extras.url);
-mywindow.location='http://o0h.org'+incoming.extras.url;
+window.open('http://o0h.org'+incoming.extras.url, '_blank');  
 //window.open('http://o0h.org'+incoming.extras.url, 'popup');
 }
 });
 push.registerEvent('push', function (incoming) {
- window.open('http://o0h.org'+incoming.extras.url, 'popup');  
+ window.open('http://o0h.org'+incoming.extras.url, '_blank');  
 });
 push.registerEvent('registration', function (error, id) {
     if (error) {
