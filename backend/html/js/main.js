@@ -9,23 +9,55 @@ function init() {
 			});
 		} else {
 			bodyScroll = new iScroll('wrapper-content', {
-			checkDOMChanges: true,
-			onBeforeScrollStart: function (e) {
-				var target = e.target;
-				while (target.nodeType != 1)
-				target =target.parentNode;
+				checkDOMChanges: true,
+				onBeforeScrollStart: function (e) {
+					var target = e.target;
+					while (target.nodeType != 1)
+					target =target.parentNode;
 
-				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
-					e.preventDefault();
-				}
-			},
-			bounce:true,
-			momentum:true,
-			preventGhostClick:true
-		});
+					if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+						e.preventDefault();
+					}
+				},
+				bounce:true,
+				momentum:true,
+				preventGhostClick:true
+			});
 
-		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			setTimeout(function(){
+				bodyScroll.refresh();
+			}, 500);
+			$('input').bind('click tap', function(e){
+				e.preventDefault();
+				e.bubble=false;
+				return false;
+			}).bind('focus', function(e){
+				e.preventDefault();
+				e.bubble=false;
+				bodyScroll.destroy();
+				bodyScroll=null;
+			}).bind('blur', function(){
+				bodyScroll = new iScroll('wrapper-content', {
+					checkDOMChanges: true,
+					onBeforeScrollStart: function (e) {
+						var target = e.target;
+						while (target.nodeType != 1)
+						target =target.parentNode;
 
+						if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+							e.preventDefault();
+						}
+					},
+					bounce:true,
+					momentum:true,
+					preventGhostClick:true
+				});
+				setTimeout(function(){
+					bodyScroll.refresh();
+				}, 500);
+			});
+
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 		}
 		if(!$.segment(2)){
 
