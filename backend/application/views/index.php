@@ -76,7 +76,7 @@
 
 <?php } else { ?>
 
-<h1> Open conversations</h1>
+<h1 style="font-size:2em;">Open conversations</h1>
 
 <?php
 
