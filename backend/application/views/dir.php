@@ -1,7 +1,7 @@
 <?
 echo "<script>var controller = 'dir';</script>"
 ?>
-
+<!--
 <div class="selectbox-wrapper">
 	<div class="selectbox">
 		<select>
@@ -24,12 +24,12 @@ echo "<script>var controller = 'dir';</script>"
 			<option>Other</option>
 		</select>
 	</div>
-</div>
+</div>-->
 <h1 id="dirtitle"><? echo $title;?></h1>
 <div id="dir_content">
 
 </div>
-<ul class="list indented directory">
+<!--<ul class="list indented directory">
 	<li>
 		<div class="icon-block left">
 			<span class="icon"></span>
@@ -74,4 +74,4 @@ echo "<script>var controller = 'dir';</script>"
 			<span class="icon icon-angle-right"></span>
 		</div>
 	</li>
-</ul>
+</ul>-->
