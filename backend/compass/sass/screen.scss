@@ -12,6 +12,85 @@ html, body {
 
 body { font-family: Arial, Tahoma; }
 
+// -------------------------
+// Logo Styles
+// -------------------------
+.logo.fullsize {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 250px;
+	height: auto;
+	padding-top: 25px;
+	margin: 0 auto;
+}
+.logo.fullsize img {
+	width: 100%;
+	max-width: 250px;
+	height: auto;
+}
+
+// -------------------------
+// Login Button Styles
+// -------------------------
+.login-button {
+	display: block;
+	position: relative;
+	width: 250px;
+	height: 45px;
+	color: #FFF;
+	border-radius: 7px;
+	margin: 0 auto;
+}
+.login-button:nth-of-type(odd){
+	margin-top: 15px;
+}
+.login-button.facebook {
+	background: #3f84eb;
+}
+.login-button.lnfaccount {
+	background: #eb4a3f;
+}
+.login-button .table-wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.login-button .title-block {
+	display: table-cell;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: lighter;
+	font-size: 30px;
+	z-index: 9;
+}
+.login-button .title-block .title {
+	color: #FFF;
+	font-weight: normal;
+	font-size: 14px;
+	text-align: center;
+}
+.login-button .icon-block {
+	display: table-cell;
+	position: relative;
+	padding-top: 2px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: lighter;
+	color: #FFF;
+	z-index: 9;
+}
+.login-button .icon-block .icon {
+	display: block;
+	position: relative;
+	width: 50px;
+	font-size: 20px;
+	border-right: 1px solid #FFF;
+}
+
 p {
 	margin: 0 !important;
 	padding: 0;
@@ -120,6 +199,18 @@ header .icon {
 	margin: 0px; 
 	z-index: 3; 
 	overflow: hidden;
+}
+
+#wrapper-content.login { 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0; 
+	margin: 0; 
+	z-index: 3; 
+	overflow: hidden;
+	//background: #eb4a3f;
 }
 
 #load-content { 
