@@ -3,7 +3,7 @@ var set_parent="";
 var page_title = "";
 
 function dir_init (){
-$("#pagetitle").html('Services');
+//$("#pagetitle").html('Services');
 
 	var remoteFile = domain+"index.php/dir/getcats/0/json";
 	$.getJSON(remoteFile, function(data) {
@@ -38,7 +38,7 @@ function write_cats (data){
 
 	}else{
 		console.log("parent else");
-		$("#pagetitle").html('Services');
+		//$("#pagetitle").html('Services');
 		$('.back_btn').attr('rel',"unbind").attr('id','');
 
 	}
@@ -70,7 +70,7 @@ return html;
 }
 function write_entries(data){
 	var html="";
-$("#pagetitle").html(data[0].cattitle);
+// $("#pagetitle").html(data[0].cattitle);
 	//html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
 	$('.back_btn').attr('rel',"getkids").attr('id',set_parent);
 	html += '<ul class="list indented directory">';
@@ -89,7 +89,7 @@ $("#pagetitle").html(data[0].cattitle);
 function write_details(data){
 	console.log("write details");
 	var html="";
-$("#pagetitle").html(data[0].title);
+// $("#pagetitle").html(data[0].title);
 	//html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
 	$('.back_btn').attr('rel',"getentries").attr('id',data[0].cid);
 	html += '<ul class="list indented directory">';
