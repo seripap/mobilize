@@ -1,5 +1,5 @@
 <?php
-echo "<script>controller = 'dir';</script>";
+echo "<script>controller = 'dir';</script>"
 ?>
 <!--
 <div class="selectbox-wrapper">
