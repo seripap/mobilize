@@ -21,11 +21,11 @@
         </a>
     </li>
     <li>
+        <a href="http://o0h.org/index.php/chat/<?php echo $user->id; ?>">
         <div class="portrait-block">
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://o0h.org/index.php/chat/<?php echo $user->id; ?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -82,6 +82,7 @@
         <?php foreach ($users as $user):?>
             <?php if ($user->id > 3): ?>
                     <li>
+        <a href="http://o0h.org/index.php/chat/<?php echo $user->id;?>">
         <div class="portrait-block">
         <?php if ($user->img): ?>
             <img src="https://graph.facebook.com/me/picture?type=normal&access_token=<?php echo ($user->token);?>" height="112" width="112" class="rounded">
@@ -90,7 +91,6 @@
         <?php endif; ?>
             <div class="bg-extension"></div>
         </div>
-        <a href="http://o0h.org/index.php/chat/<?php echo $user->id;?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
