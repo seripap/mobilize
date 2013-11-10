@@ -13,6 +13,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
+  <link rel="apple-touch-icon-precomposed" href="http://o0h.org/images/icons/icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://o0h.org/images/icons/icon@2x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://o0h.org/images/icons/icon-72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://o0h.org/images/icons/icon-72@2x.png">
+
+
 	<link rel="stylesheet" type="text/css" href="http://o0h.org/css/screen.css">
   <script src="http://o0h.org/js/jquery.min.js"></script>
   <script src="http://o0h.org/js/segment.js"></script>
@@ -27,7 +33,7 @@
 		<!-- Project Header -->
 		<header>
 			<ul>
-				<li class="empty"><span class="action back_btn">back</span></li>
+				<li class="empty"><span class="action back_btn icon icon-angle-left"></span></li>
 				<li id="pagetitle">Lost-n-Found [ATL]</li>
 				<li id="cog_nav">
 					<?php if (isset($user)): ?>

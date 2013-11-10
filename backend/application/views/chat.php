@@ -72,7 +72,7 @@
           });
           $('.chat-stream').html(html);
 
-          $('#wrapper-content').animate({scrollTop:$(document).height()}, 'slow');
+          // $('#wrapper-content').animate({scrollTop:$(document).height()}, 'slow');
 
         // reset scroll height
         // setTimeout(function(){
