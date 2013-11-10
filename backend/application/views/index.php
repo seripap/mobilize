@@ -5,6 +5,7 @@
             <img src="http://o0h.org/images/lnf_contact.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
+        <a href="tel:+16788567825">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -16,6 +17,7 @@
                 </div>
             </div>
         </div>
+        </a>
     </li>
     <li>
         <div class="portrait-block">
@@ -74,7 +76,7 @@
 
 <?php } else { ?>
 
-<h1> Open conversations</h1>
+<h1 style="font-size:2em;">Open conversations</h1>
 
 <?php
 

@@ -1,5 +1,6 @@
 <script>
     var userid = <?php echo $user->id ?>;
+    var controller = "chat";
 
 		var time = 0;
     var helperid = $.segment(3);
