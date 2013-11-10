@@ -1,5 +1,6 @@
 <div class="context-wrapper">
 	<div class="context-block">
+	<figure><img src="http://o0h.org/images/homeless.jpg"></figure>
 		<h1 class="red">Our Mission</h1>
 		<p>Lost-n-Found Youth, Inc. is an Atlanta-based nonprofit corporation whose mission is to take homeless lesbian, gay, bisexual, and transgender youths off the street and transition them into more permanent housing arrangements. We operate a 24/7 hotline as well as a 6-bed housing facility in Atlanta, Georgia.</p>
 	</div>
