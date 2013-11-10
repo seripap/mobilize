@@ -117,7 +117,7 @@ entrydata.url = "<a href='http://"+entrydata.url+"'>"+entrydata.url+"</a>";
 	html +=(entrydata.title ? "<li>"+"<span id='title' rel=''>"+entrydata.title + "</span></li>": "");
 	html +=(entrydata.cattitle ? "<li><strong>Type: </strong>"+"<span id='cattitle' rel=''>"+entrydata.cattitle + "</span></li>": "");
 	html +=(entrydata.desc ? "<li>"+"<span id='desc' rel=''>"+entrydata.desc + "</span></li>": "");
-	html +=(phonenum ? "<li><strong>Call: </strong>"+"<span id='phone' rel=''><a href='tel:"+entrydata.address+"'>"+phonenum + "</a></span></li>": "");
+	html +=(phonenum ? "<li><strong>Call: </strong>"+"<span id='phone' rel=''><a href='tel:"+phonenum+"'>"+phonenum + "</a></span></li>": "");
 	html +=(entrydata.address ? "<li><strong>Address: </strong><br />"+"<span id='address' rel=''>"+entrydata.address + "</span></li>": "");
 	html +=(entrydata.url ? "<li><strong>Website: </strong>"+"<span id='url' rel=''>"+entrydata.url + "</span></li>": "");
 	html +=(entrydata.rating ? "<li><strong>Rating: </strong>"+"<span id='rating' rel=''>"+entrydata.rating + "</span></li>": "");
