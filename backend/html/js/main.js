@@ -68,4 +68,8 @@ $(function() {
 		document.location = "http://o0h.org/index.php/oauth";
 	});
 
+	$('#adminLogin').click(function() {
+	document.location = "http://o0h.org/index.php/adminlogin";
+	});
+
 });
