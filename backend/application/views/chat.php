@@ -9,6 +9,31 @@
       helperid = 1;
     }
 
+    switch (userid) {
+      case 1:
+      helperid = 4;
+      convoid = 1;
+      break;
+
+      case 4:
+      helperid = 1;
+      convoid = 1;
+      break;
+
+      case 5:
+      convoid = 2;
+      break;
+
+      case 6:
+      convoid = 3;
+      break;
+
+      case 7:
+      convoid = 8;
+      break;
+
+    }
+
     var updateTime = function (cb) {
       $.getJSON("http://local.o0h.org/index.php/chat/time", function (data) {
         cb(~~data);
@@ -16,7 +41,7 @@
     };
 
     var sendChat = function (message) {
-      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + helperid + "&convoid=" + helperid, function (){
+      $.getJSON("http://local.o0h.org/index.php/chat/insert_chat?message=" + message + "&from=" + userid + "&to=" + helperid + "&convoid=" + convoid, function (){
         $('#message_container').html('');
         getNewChats();
       });
@@ -29,7 +54,7 @@
     }
 
     var getNewChats = function () {
-      $.getJSON("http://local.o0h.org/index.php/chat/get_chats?convoid=" + helperid, function (data){
+      $.getJSON("http://local.o0h.org/index.php/chat/get_chats?convoid=" + convoid, function (data){
         console.debug(data);
         var html = '';
 
@@ -54,8 +79,7 @@
     });
     }
 
-    // using JQUERY's ready method to know when all dom elements are rendered
-    $( document ).ready ( function () {
+    $(function() {
       getNewChats();
       // set an on click on the button
       $("form").submit(function (evt) {
