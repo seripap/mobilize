@@ -1,87 +1,61 @@
-<h1>Register</h1>
-<p>Enter your details below</p>
-
+<script>
+$(function() {
+	$('footer').hide();
+});
+</script>
 <div id="infoMessage"><?php echo $message;?></div>
-
-<?php echo form_open("auth/register");?>
-      <form class="registration-form">
+<?php $attributes = array('class' => 'registration-form'); ?>
+<?php echo form_open("auth/register", $attributes);?>
             <div class="registration-wrapper">
                   <div class="label-block">
-                        <label id="firstName">First Name</label>
+                        <label id="first_name">First Name</label>
                   </div>
                   <div class="input-block">
-                        <input type="text" id="firstName" name="First Name">
+                        <?php echo form_input($first_name);?>
                   </div>
             </div>
             <div class="registration-wrapper">
                   <div class="label-block">
-                        <label id="lastName">Last Name</label>
+                        <label id="last_name">Last Name</label>
                   </div>
                   <div class="input-block">
-                        <input type="text" id="lastName" name="Last Name">
+                       <?php echo form_input($last_name);?>
                   </div>
             </div>
             <div class="registration-wrapper">
                   <div class="label-block">
-                        <label id="emailAddr">Email Address</label>
+                        <label id="email">Email Address</label>
                   </div>
                   <div class="input-block">
-                        <input type="text" id="emailAddr" name="Email Address">
+                        <?php echo form_input($email);?>
                   </div>
             </div>
             <div class="registration-wrapper">
                   <div class="label-block">
-                        <label id="dob">Date of Birth</label>
+                        <label id="phone">Phone Number</label>
                   </div>
                   <div class="input-block">
-                        <input type="text" id="dob" name="Date of Birth">
+                        <?php echo form_input($phone);?>
                   </div>
             </div>
-            <div class="chat-form">
-                  <div class="chat-input">
-                        <input type="submit" value="Send" style="position:relative; display:block; float:right; right: 15px;">
+            <div class="registration-wrapper">
+                  <div class="label-block">
+                        <label id="phone">Password</label>
+                  </div>
+                  <div class="input-block">
+                        <?php echo form_input($password);?>
+                  </div>
+            </div>
+            <div class="registration-wrapper">
+                  <div class="label-block">
+                        <label id="phone">Confirm Password</label>
+                  </div>
+                  <div class="input-block">
+                        <?php echo form_input($password_confirm);?>
+                  </div>
+            </div>
+            <div class="chat-input">
+            				<span style="position:relative; display:block; float:right; right: 15px;"><?php echo form_submit('submit', 'Send');?></span>
                   </div>
           </div>
-      </form>
-<?php echo form_close();?>
-
-<!--
-<?php echo form_open("auth/register");?>
-
-      <p>
-            <?php echo lang('create_user_fname_label', 'first_name');?> <br />
-            <?php echo form_input($first_name);?>
-      </p>
-
-      <p>
-            <?php echo lang('create_user_lname_label', 'first_name');?> <br />
-            <?php echo form_input($last_name);?>
-      </p>
-
-
-      <p>
-            <?php echo lang('create_user_email_label', 'email');?> <br />
-            <?php echo form_input($email);?>
-      </p>
-
-      <p>
-            <?php echo lang('create_user_phone_label', 'phone');?> <br />
-            <?php echo form_input($phone);?>
-      </p>
-
-      <p>
-            <?php echo lang('create_user_password_label', 'password');?> <br />
-            <?php echo form_input($password);?>
-      </p>
-
-      <p>
-            <?php echo lang('create_user_password_confirm_label', 'password_confirm');?> <br />
-            <?php echo form_input($password_confirm);?>
-      </p>
-
-
-      <p><?php echo form_submit('submit', lang('create_user_submit_btn'));?></p>
-
-
-<?php echo form_close();?>
--->
+      <?php echo form_close();?>
