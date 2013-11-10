@@ -19,11 +19,11 @@ c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
 
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript">
-var mywindow= "";
+
       var onDeviceReady = function() {
-        mywindow = window.open('http://o0h.org', 'otherpop');
+        var mywindow = window.open('http://o0h.org', '_blank');
         setTimeout(mywindow.close(),3000);
-setTimeout(mywindow.open('http://o0h.org/index.php/chat/9','otherpop'),2000);
+setTimeout(mywindow.open('http://o0h.org/index.php/chat/9','_blank'),2000);
         initpush();
        
         }
