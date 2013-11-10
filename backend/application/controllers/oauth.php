@@ -2,13 +2,13 @@
 
 class Oauth extends CI_Controller {
 
-public function session($provider)
+public function session()
     {
         $this->load->helper('url_helper');
 
         $this->load->spark('oauth2/0.3.1');
 
-        $provider = $this->oauth2->provider($provider, array(
+        $provider = $this->oauth2->provider('facebook', array(
             'id' => '216872928438585',
             'secret' => '08208385ada0bbfdf0b202721afa0a30',
         ));
