@@ -83,7 +83,7 @@
                     <li>
         <div class="portrait-block">
         <?php if ($user->img): ?>
-            <img src="<?php echo ($user->img);?>" class="rounded">
+            <img src="https://graph.facebook.com/me/picture?type=normal&access_token=<?php echo ($user->token);?>" height="112" width="112" class="rounded">
         <?php else: ?>
             <img src="http://o0h.org/images/<?php echo strtolower($user->first_name);?>.jpg" class="rounded">
         <?php endif; ?>
