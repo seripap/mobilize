@@ -27,6 +27,14 @@ function init() {
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 		}
+		if(!$.segment(2)){
+
+			$('.back_btn').hide();
+		}else{
+
+			
+	$('.back_btn').click(function(){window.location=domain+"index.php";});
+		}
 	});
 }
 
@@ -46,10 +54,6 @@ $(function() {
 
 	$('#navAbout').click(function() {
 		document.location = "http://local.o0h.org/index.php/about";
-	});
-
-	$('#loginWithFB').click(function() {
-		document.location = "http://local.o0h.org/index.php/oauth"
 	});
 
 });
