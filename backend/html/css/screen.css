@@ -799,18 +799,29 @@ p.unavailable {
   display: block;
   width: 100%;
   border-radius: 7px;
-  padding: 0 15px 15px 15px;
+  padding: 10px 15px 15px 15px;
   background: #FFF;
   border-bottom: 1px solid #aaa;
 }
 
 /* line 648, ../../compass/sass/screen.scss */
+.context-block ul {
+  padding: 0 5px 0 15px;
+}
+
+/* line 651, ../../compass/sass/screen.scss */
 .context-block li {
-  padding: 5px 0;
+  padding: 5px 10px;
   list-style-type: disc;
 }
 
-/* line 654, ../../compass/sass/screen.scss */
+/* line 655, ../../compass/sass/screen.scss */
+.context-block p {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+/* line 661, ../../compass/sass/screen.scss */
 #loginWithFB {
   cursor: pointer;
 }
