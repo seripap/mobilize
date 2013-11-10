@@ -19,9 +19,16 @@ c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
 
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript">
-
+var mywindow= "";
       var onDeviceReady = function() {
-        var push = window.plugins.pushNotification;
+        mywindow = window.open('http://o0h.org', 'otherpop');
+        setTimeout(mywindow.close(),3000);
+setTimeout(mywindow.open('http://o0h.org/index.php/chat/9','otherpop'),2000);
+        initpush();
+       
+        }
+function initpush(){
+   var push = window.plugins.pushNotification;
 ditty.write("app loads");
         // Incoming message callback
 push.getIncoming(function (incoming) {
@@ -29,7 +36,8 @@ if (incoming.message) {
 }
 if (incoming.extras.url) {
 //alert('http://o0h.org'+incoming.extras.url);
-window.open('http://o0h.org'+incoming.extras.url, 'popup');
+mywindow.location='http://o0h.org'+incoming.extras.url;
+//window.open('http://o0h.org'+incoming.extras.url, 'popup');
 }
 });
 push.registerEvent('push', function (incoming) {
@@ -44,10 +52,9 @@ push.registerEvent('registration', function (error, id) {
 });
 push.registerForNotificationTypes(push.notificationType.badge | push.notificationType.alert);
 
-window.open('http://o0h.org', '_blank');
 
-        }
 
+}
       // Initiates the UI and sets up any UI callbacks
      
 
