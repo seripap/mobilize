@@ -59,8 +59,8 @@
 
           $.each(data, function() {
             var time = convertTime(this.time);
-            console.log(time);
-            if (this.to_user_id != userid) {
+            if (this.user_id != userid) {
+              html += ('<p><span style="color: #AAA; font-size: 0.6em;">'+time+'</span></p>');
               html += ('<div class="message-wrapper">');
               html += ('<div class="name-block left">');
               html += ('<div class="name">');
@@ -68,14 +68,15 @@
               html += ('</div></div>');
               html += ('<div class="message-block">');
               html += ('<div class="message me">');
-              html += ('<p><span style="color: #CCC; font-size: 0.6em;">'+time+'</span> '+this.message+'</p>');
+              html += ('<p>'+this.message+'</p>');
               html += ('</div></div>');
               html += ('</div>');
             } else {
+              html += ('<p><span style="color: #AAA; font-size: 0.6em;">'+time+'</span></p>');
               html += ('<div class="message-wrapper">');
               html += ('<div class="message-block">');
               html += ('<div class="message me">');
-              html += ('<p><span style="color: #CCC; font-size: 0.6em;">'+time+'</span> '+this.message+'</p>');
+              html += ('<p>'+this.message+'</p>');
               html += ('</div></div>');
               html += ('<div class="name-block right">');
               html += ('<div class="name">');
@@ -112,6 +113,7 @@
 </script>
 
   <section id="message_container">
+  <form>
     <div class="inner-wrapper">
       <div class="chat-stream">
       </div>
@@ -122,4 +124,5 @@
         </div>
       </div>
     </div>
+    </form>
   </section>

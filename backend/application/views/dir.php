@@ -1,4 +1,4 @@
-<?
+<?php
 echo "<script>controller = 'dir';</script>"
 ?>
 <!--
