@@ -14,7 +14,7 @@
 		<header>
 			<ul>
 				<li class="empty"></li>
-				<li>Lost 'N Found [ATL]</li>
+				<li>Lost-n-Found [ATL]</li>
 				<li >
 					<span class="icon icon-cog"></span>
 				</li>
@@ -24,14 +24,14 @@
 		<!-- Project Content --> 
 		<div id="wrapper-content"> 
 			<section id="load-content" attr="scrollMe">
-				<article id="login" style="display:block">
+				<article id="login" style="display:none;">
 					<div class="logo full-width"></div>
 					<div class="facebook-login"></div>
 					<div class="standard-login"></div>
 					<div class="register"></div>
 				</article>
 
-				<article id="registration">
+				<article id="registration" style="display:none;">
 					<form>
 						<label id="firstName">First Name</label>
 						<input type="text" id="firstName" name="First Name">
@@ -47,11 +47,11 @@
 					</form>
 				</article>
 
-				<article id="logout">
+				<article id="logout" style="display:none;">
 					<div class="logout-text">Logout text goes here...</div>
 				</article>
 
-				<article id="chat-users" style="display: none">
+				<article id="chat-users" style="display: block">
 					<ul class="list indented users">
 					    <li>
 					        <div class="portrait-block">
@@ -122,12 +122,13 @@
 					        </div>
 					    </li>
 					</ul>
+					<br/><br/>
 				</article>
 
-				<article id="chat-stream">
+				<article id="chat-stream" style="display:none;">
 				</article>
 
-				<article id="services">
+				<article id="services" style="display:none;">
 					<div class="selectbox-wrapper">
 						<div class="selectbox">
 							<select>
@@ -200,7 +201,7 @@
 					</ul>
 				</article>
 
-				<article id="about" style="display:block">
+				<article id="about" style="display:none">
 					<div class="context-wrapper">
 						<div class="context-block">
 							<h1 class="red">Our Mission</h1>
@@ -227,7 +228,7 @@
 					</div>
 				</article>
 
-				<article id="settings">
+				<article id="settings" style="display:none;">
 				</article>
 			</section> 
 		</div> 
@@ -241,5 +242,11 @@
 			</ul>
 		</footer>
 	</div>
+
+	<script type="text/javascript" src="../../html/js/iscroll.js"></script>
+	<script>
+		bodyScroll = new iScroll('wrapper-content', { bounce:true, momentum:true, preventGhostClick:true});
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	</script>
 </body>
 </html>

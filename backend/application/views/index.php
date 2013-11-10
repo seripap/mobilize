@@ -1,3 +1,4 @@
+<?php if (!$admin) { ?>
 <ul class="list indented users">
     <li>
         <div class="portrait-block">
@@ -21,7 +22,7 @@
             <img src="http://o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="chat/1">
+        <a href="index.php/chat/1">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -47,7 +48,7 @@
                     <p class="desc"><span class="icon icon-comments"></span>Tap to message</p>
                 </div>
                 <div class="availability-block">
-                    <p class="available">AVAILABLE</p>
+                    <p class="unavailable">UNAVAILABLE</p>
                 </div>
             </div>
         </div>
@@ -71,4 +72,21 @@
     </li>
 </ul>
 
+<?php } else { ?>
+
+<h1> Open conversations</h1>
+
+<?php
+
+
+foreach ($results as $key) {
+    foreach ($key as $k => $v) {
+        echo $k . " " . $v . " <br />";
+    }
+}
+
+
+?>
+
+<?php } ?>
 <div id="infoMessage"><?php echo $message;?></div>

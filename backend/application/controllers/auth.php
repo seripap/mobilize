@@ -46,10 +46,39 @@ class Auth extends CI_Controller {
 				$this->data['admin'] = TRUE;
 			}
 
+				$this->db->where('conversation_id', $this->data['user']->id)->order_by('time','DESC');
+				$query = $this->db->get('messages');
+
+				$this->data['results'] = [];
+
+				foreach ($query->result() as $row => $data)
+				{
+					foreach ($data as $key => $value) {
+						if ($key == 'user_id') {
+							$this->data['results'][$row]['my_username'] = $this->get_username($value);
+						}
+
+						if ($key == 'to_user_id') {
+							$this->data['results'][$row]['to_username'] = $this->get_username($value);
+						}
+
+						$this->data['results'][$row][$key] = $value;
+					}
+				}
 			$this->_render_page('index', $this->data);
 		}
 	}
 
+	function get_username($userid) {
+		$this->db->where('id', $userid);
+		$query = $this->db->get('users');
+
+		foreach ($query->result() as $row)
+		{
+			return $row->username;
+		}
+
+	}
 	//log the user in
 	function login()
 	{
@@ -90,11 +119,11 @@ class Auth extends CI_Controller {
 				'id' => 'identity',
 				'type' => 'text',
 				'value' => $this->form_validation->set_value('identity'),
-			);
+				);
 			$this->data['password'] = array('name' => 'password',
 				'id' => 'password',
 				'type' => 'password',
-			);
+				);
 
 			$this->_render_page('login', $this->data);
 		}
@@ -138,25 +167,25 @@ class Auth extends CI_Controller {
 				'name' => 'old',
 				'id'   => 'old',
 				'type' => 'password',
-			);
+				);
 			$this->data['new_password'] = array(
 				'name' => 'new',
 				'id'   => 'new',
 				'type' => 'password',
 				'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
-			);
+				);
 			$this->data['new_password_confirm'] = array(
 				'name' => 'new_confirm',
 				'id'   => 'new_confirm',
 				'type' => 'password',
 				'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
-			);
+				);
 			$this->data['user_id'] = array(
 				'name'  => 'user_id',
 				'id'    => 'user_id',
 				'type'  => 'hidden',
 				'value' => $user->id,
-			);
+				);
 
 			//render
 			$this->_render_page('change_password', $this->data);
@@ -190,7 +219,7 @@ class Auth extends CI_Controller {
 			//setup the input
 			$this->data['email'] = array('name' => 'email',
 				'id' => 'email',
-			);
+				);
 
 			if ( $this->config->item('identity', 'ion_auth') == 'username' ){
 				$this->data['identity_label'] = $this->lang->line('forgot_password_username_identity_label');
@@ -207,12 +236,12 @@ class Auth extends CI_Controller {
 		else
 		{
 			// get identity for that email
-            $identity = $this->ion_auth->where('email', strtolower($this->input->post('email')))->users()->row();
-            if(empty($identity)) {
-                $this->ion_auth->set_message('forgot_password_email_not_found');
-                $this->session->set_flashdata('message', $this->ion_auth->messages());
-                redirect("forgot_password", 'refresh');
-            }
+			$identity = $this->ion_auth->where('email', strtolower($this->input->post('email')))->users()->row();
+			if(empty($identity)) {
+				$this->ion_auth->set_message('forgot_password_email_not_found');
+				$this->session->set_flashdata('message', $this->ion_auth->messages());
+				redirect("forgot_password", 'refresh');
+			}
 
 			//run the forgotten password method to email an activation code to the user
 			$forgotten = $this->ion_auth->forgotten_password($identity->{$this->config->item('identity', 'ion_auth')});
@@ -259,21 +288,21 @@ class Auth extends CI_Controller {
 				$this->data['new_password'] = array(
 					'name' => 'new',
 					'id'   => 'new',
-				'type' => 'password',
+					'type' => 'password',
 					'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
-				);
+					);
 				$this->data['new_password_confirm'] = array(
 					'name' => 'new_confirm',
 					'id'   => 'new_confirm',
 					'type' => 'password',
 					'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
-				);
+					);
 				$this->data['user_id'] = array(
 					'name'  => 'user_id',
 					'id'    => 'user_id',
 					'type'  => 'hidden',
 					'value' => $user->id,
-				);
+					);
 				$this->data['csrf'] = $this->_get_csrf_nonce();
 				$this->data['code'] = $code;
 
@@ -418,7 +447,7 @@ class Auth extends CI_Controller {
 				'last_name'  => $this->input->post('last_name'),
 				'company'    => $this->input->post('company'),
 				'phone'      => $this->input->post('phone'),
-			);
+				);
 		}
 		if ($this->form_validation->run() == true && $this->ion_auth->register($username, $password, $email, $additional_data))
 		{
@@ -438,43 +467,43 @@ class Auth extends CI_Controller {
 				'id'    => 'first_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('first_name'),
-			);
+				);
 			$this->data['last_name'] = array(
 				'name'  => 'last_name',
 				'id'    => 'last_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('last_name'),
-			);
+				);
 			$this->data['email'] = array(
 				'name'  => 'email',
 				'id'    => 'email',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('email'),
-			);
+				);
 			$this->data['company'] = array(
 				'name'  => 'company',
 				'id'    => 'company',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('company'),
-			);
+				);
 			$this->data['phone'] = array(
 				'name'  => 'phone',
 				'id'    => 'phone',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('phone'),
-			);
+				);
 			$this->data['password'] = array(
 				'name'  => 'password',
 				'id'    => 'password',
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password'),
-			);
+				);
 			$this->data['password_confirm'] = array(
 				'name'  => 'password_confirm',
 				'id'    => 'password_confirm',
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password_confirm'),
-			);
+				);
 
 			$this->_render_page('create_user', $this->data);
 		}
@@ -501,7 +530,7 @@ class Auth extends CI_Controller {
 				'first_name' => $this->input->post('first_name'),
 				'last_name'  => $this->input->post('last_name'),
 				'phone'      => $this->input->post('phone'),
-			);
+				);
 		}
 		if ($this->form_validation->run() == true && $this->ion_auth->register($username, $password, $email, $additional_data))
 		{
@@ -521,37 +550,37 @@ class Auth extends CI_Controller {
 				'id'    => 'first_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('first_name'),
-			);
+				);
 			$this->data['last_name'] = array(
 				'name'  => 'last_name',
 				'id'    => 'last_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('last_name'),
-			);
+				);
 			$this->data['email'] = array(
 				'name'  => 'email',
 				'id'    => 'email',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('email'),
-			);
+				);
 			$this->data['phone'] = array(
 				'name'  => 'phone',
 				'id'    => 'phone',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('phone'),
-			);
+				);
 			$this->data['password'] = array(
 				'name'  => 'password',
 				'id'    => 'password',
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password'),
-			);
+				);
 			$this->data['password_confirm'] = array(
 				'name'  => 'password_confirm',
 				'id'    => 'password_confirm',
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password_confirm'),
-			);
+				);
 
 			$this->_render_page('register', $this->data);
 		}
@@ -591,7 +620,7 @@ class Auth extends CI_Controller {
 				'last_name'  => $this->input->post('last_name'),
 				'company'    => $this->input->post('company'),
 				'phone'      => $this->input->post('phone'),
-			);
+				);
 
 			//Update the groups user belongs to
 			$groupData = $this->input->post('groups');
@@ -642,35 +671,35 @@ class Auth extends CI_Controller {
 			'id'    => 'first_name',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('first_name', $user->first_name),
-		);
+			);
 		$this->data['last_name'] = array(
 			'name'  => 'last_name',
 			'id'    => 'last_name',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('last_name', $user->last_name),
-		);
+			);
 		$this->data['company'] = array(
 			'name'  => 'company',
 			'id'    => 'company',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('company', $user->company),
-		);
+			);
 		$this->data['phone'] = array(
 			'name'  => 'phone',
 			'id'    => 'phone',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('phone', $user->phone),
-		);
+			);
 		$this->data['password'] = array(
 			'name' => 'password',
 			'id'   => 'password',
 			'type' => 'password'
-		);
+			);
 		$this->data['password_confirm'] = array(
 			'name' => 'password_confirm',
 			'id'   => 'password_confirm',
 			'type' => 'password'
-		);
+			);
 
 		$this->_render_page('edit_user', $this->data);
 	}
@@ -711,13 +740,13 @@ class Auth extends CI_Controller {
 				'id'    => 'group_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('group_name'),
-			);
+				);
 			$this->data['description'] = array(
 				'name'  => 'description',
 				'id'    => 'description',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('description'),
-			);
+				);
 
 			$this->_render_page('create_group', $this->data);
 		}
@@ -774,13 +803,13 @@ class Auth extends CI_Controller {
 			'id'    => 'group_name',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('group_name', $group->name),
-		);
+			);
 		$this->data['group_description'] = array(
 			'name'  => 'group_description',
 			'id'    => 'group_description',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('group_description', $group->description),
-		);
+			);
 
 		$this->_render_page('edit_group', $this->data);
 	}
