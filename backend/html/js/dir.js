@@ -141,9 +141,9 @@ function run_links(){
 		//console.log($(element).attr("rel"));
 		$(element).click(function(){		
 			console.log("click:"+$(element).attr("rel")+"("+element.id+")")
-			$("#dir_content").fadeOut(300,function(){
+			
 			eval ($(element).attr("rel")+"("+element.id+")");
-			$("#dir_content").fadeIn(300);
+			
 			});
 			
 		});
