@@ -1,5 +1,5 @@
 var domain = "http://localhost/";
-
+var controller = "";
 function init() {
 
 	$(document).ready(function() {
