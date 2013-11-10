@@ -15,7 +15,7 @@ function write_cats (data){
 	var html="";
 	set_parent = data[0].parent;
 	if(data[0].parent!=0){
-		html+="<div>"+"<span class='action' id='0' rel='getkids'>Back</span></div>";
+		html+="<div>"+"<span class='action back' id='0' rel='getkids'>Back</span></div>";
 
 	}
 
@@ -48,7 +48,7 @@ return html;
 function write_entries(data){
 	var html="";
 
-	html+="<div>"+"<span class='action' id='"+set_parent+"' rel='getkids'>Back</span></div>";
+	html+="<div>"+"<span class='action back' id='"+set_parent+"' rel='getkids'>Back</span></div>";
 	
 	html += '<ul class="list indented directory">';
 
@@ -67,7 +67,7 @@ function write_details(data){
 	console.log("write details");
 	var html="";
 
-	html+="<div>"+"<span class='action' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
+	html+="<div>"+"<span class='action back' id='"+data[0].cid+"' rel='getentries'>Back</span></div>";
 	
 	html += '<ul class="list indented directory">';
 
@@ -76,13 +76,13 @@ function write_details(data){
 
 	console.log(entrydata.desc);
 
-	html +="<li>"+"<span class='action' id='title' rel=''>"+entrydata.title + "</span></li>";
-	html +="<li>"+"<span class='action' id='cattitle' rel=''>"+entrydata.cattitle + "</span></li>";
-	html +="<li>"+"<span class='action' id='desc' rel=''>"+entrydata.desc + "</span></li>";
-	html +="<li>"+"<span class='action' id='phone' rel=''>"+entrydata.phone + "</span></li>";
-	html +="<li>"+"<span class='action' id='address' rel=''>"+entrydata.address + "</span></li>";
-	html +="<li>"+"<span class='action' id='url' rel=''>"+entrydata.url + "</span></li>";
-	html +="<li>"+"<span class='action' id='rating' rel=''>"+entrydata.rating + "</span></li>";
+	html +="<li>"+"<span id='title' rel=''>"+entrydata.title + "</span></li>";
+	html +="<li><strong>Type: </strong>"+"<span id='cattitle' rel=''>"+entrydata.cattitle + "</span></li>";
+	html +="<li>"+"<span id='desc' rel=''>"+entrydata.desc + "</span></li>";
+	html +="<li>"+"<span id='phone' rel=''>"+entrydata.phone + "</span></li>";
+	html +="<li>"+"<span id='address' rel=''>"+entrydata.address + "</span></li>";
+	html +="<li>"+"<span id='url' rel=''>"+entrydata.url + "</span></li>";
+	html +="<li>"+"<span id='rating' rel=''>"+entrydata.rating + "</span></li>";
 	$("#dir_content").html(html);
 
 run_links();
