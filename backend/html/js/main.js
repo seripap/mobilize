@@ -61,7 +61,9 @@ $(function() {
 
 	$('#loginWithFB').click(function() {
 		$('#loginWithFB').html('');
+		$('#canvasLoader').css('text-align','center');
 		var cl = new CanvasLoader('loginWithFB');
+		cl.setColor("#FFFFFF");
 		cl.setDiameter(17); // default is 40
 		cl.setRange(0.4); // default is 1.3
 		cl.show(); // Hidden by default
@@ -69,7 +71,7 @@ $(function() {
 	});
 
 	$('#adminLogin').click(function() {
-	document.location = "http://o0h.org/index.php/adminlogin";
+		document.location = "http://o0h.org/index.php/adminlogin";
 	});
 
 });
