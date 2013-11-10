@@ -28,6 +28,7 @@ echo "<script>controller = 'dir';</script>"
 <div id="dir_content">
 
 </div>
+</br></br><br/><br/><br/><br/>
 <!--<ul class="list indented directory">
 	<li>
 		<div class="icon-block left">

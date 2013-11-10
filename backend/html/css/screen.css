@@ -825,3 +825,13 @@ p.unavailable {
 #loginWithFB {
   cursor: pointer;
 }
+
+/* line 665, ../../compass/sass/screen.scss */
+.logout-btn {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
