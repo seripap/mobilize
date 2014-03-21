@@ -21,12 +21,12 @@ c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
     <script type="text/javascript">
 
       var onDeviceReady = function() {
-        //window.open('http://o0h.org', '_blank');
+        //window.open('http://local.o0h.org', '_blank');
 
-      var ref = window.open('http://o0h.org', '_blank', 'location=yes');
+      var ref = window.open('http://local.o0h.org', '_blank', 'location=yes');
 ref.addEventListener('loadstop', function(event) { initpush(); });
         //initpush();
-       
+
         }
 function initpush(){
    var push = window.plugins.pushNotification;
@@ -36,13 +36,13 @@ push.getIncoming(function (incoming) {
 if (incoming.message) {
 }
 if (incoming.extras.url) {
-//alert('http://o0h.org'+incoming.extras.url);
-window.open('http://o0h.org'+incoming.extras.url, '_blank');  
-//window.open('http://o0h.org'+incoming.extras.url, 'popup');
+//alert('http://local.o0h.org'+incoming.extras.url);
+window.open('http://local.o0h.org'+incoming.extras.url, '_blank');
+//window.open('http://local.o0h.org'+incoming.extras.url, 'popup');
 }
 });
 push.registerEvent('push', function (incoming) {
- window.open('http://o0h.org'+incoming.extras.url, '_blank');  
+ window.open('http://local.o0h.org'+incoming.extras.url, '_blank');
 });
 push.registerEvent('registration', function (error, id) {
     if (error) {
@@ -57,13 +57,13 @@ push.registerForNotificationTypes(push.notificationType.badge | push.notificatio
 
 }
       // Initiates the UI and sets up any UI callbacks
-     
 
-      
+
+
         // Update the interface with the current UA settings
-       
 
-      
+
+
 function onLoad(){
       document.addEventListener("deviceready", onDeviceReady);
   }
@@ -80,10 +80,10 @@ function onLoad(){
     </div>
 
     <div data-role="content">
-      
+
     </div>
 
   </div>
 </body>
 </html>
- 
+

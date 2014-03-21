@@ -73,19 +73,19 @@ $('.back_btn').hide();
 
 $(function() {
 	$('#cog_nav').click(function() {
-		document.location = "http://o0h.org/index.php/settings";
+		document.location = "http://local.o0h.org/index.php/settings";
 	});
 
 	$('#navChat').click(function() {
-		document.location = "http://o0h.org";
+		document.location = "http://local.o0h.org";
 	});
 
 	$('#navServices').click(function() {
-		document.location = "http://o0h.org/index.php/dir";
+		document.location = "http://local.o0h.org/index.php/dir";
 	});
 
 	$('#navAbout').click(function() {
-		document.location = "http://o0h.org/index.php/about";
+		document.location = "http://local.o0h.org/index.php/about";
 	});
 
 	$('#loginWithFB').click(function() {
@@ -96,11 +96,11 @@ $(function() {
 		cl.setDiameter(17); // default is 40
 		cl.setRange(0.4); // default is 1.3
 		cl.show(); // Hidden by default
-		document.location = "http://o0h.org/index.php/oauth";
+		document.location = "http://local.o0h.org/index.php/oauth";
 	});
 
 	$('#adminLogin').click(function() {
-		document.location = "http://o0h.org/index.php/adminlogin";
+		document.location = "http://local.o0h.org/index.php/adminlogin";
 	});
 
 });

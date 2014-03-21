@@ -3,7 +3,7 @@
 <ul class="list indented users">
     <li>
         <div class="portrait-block">
-            <img src="http://o0h.org/images/lnf_contact.jpg" class="rounded">
+            <img src="http://local.o0h.org/images/lnf_contact.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <a href="tel:+16788567825">
@@ -22,10 +22,10 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="http://o0h.org/images/art.jpg" class="rounded">
+            <img src="http://local.o0h.org/images/art.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
-        <a href="http://o0h.org/index.php/chat/<?php echo $user->id; ?>">
+        <a href="http://local.o0h.org/index.php/chat/<?php echo $user->id; ?>">
         <div class="block-wrapper">
             <div class="block-table">
                 <div class="text-block">
@@ -41,7 +41,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="http://o0h.org/images/jason.jpg" class="rounded">
+            <img src="http://local.o0h.org/images/jason.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -58,7 +58,7 @@
     </li>
     <li>
         <div class="portrait-block">
-            <img src="http://o0h.org/images/justin.jpg" class="rounded">
+            <img src="http://local.o0h.org/images/justin.jpg" class="rounded">
             <div class="bg-extension"></div>
         </div>
         <div class="block-wrapper">
@@ -86,7 +86,7 @@
         <?php if ($user->img): ?>
             <img src="https://graph.facebook.com/me/picture?type=normal&access_token=<?php echo ($user->token);?>" height="112" width="112" class="rounded">
         <?php else: ?>
-            <img src="http://o0h.org/images/<?php echo strtolower($user->first_name);?>.jpg" class="rounded">
+            <img src="http://local.o0h.org/images/<?php echo strtolower($user->first_name);?>.jpg" class="rounded">
         <?php endif; ?>
             <div class="bg-extension"></div>
         </div>
@@ -106,7 +106,7 @@
         <script>
     $(function() {
         $("#content_<?php echo $user->id; ?>").click(function() {
-            window.location = "http://o0h.org/index.php/chat/<?php echo $user->id;?>";
+            window.location = "http://local.o0h.org/index.php/chat/<?php echo $user->id;?>";
         });
     });
     </script>

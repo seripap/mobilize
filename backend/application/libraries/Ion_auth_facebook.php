@@ -17,7 +17,7 @@ class Facebook_ion_auth {
 		// config
 		$this->app_id = "216872928438585"; // your app id
 		$this->app_secret = "08208385ada0bbfdf0b202721afa0a30"; // your app secret key
-		$this->my_url = site_url('http://o0h.org'); // url to redirect back from facebook
+		$this->my_url = site_url('http://local.o0h.org'); // url to redirect back from facebook
 		$this->scope = 'email'; // custom permissions check - http://developers.facebook.com/docs/reference/login/#permissions
 	}
 

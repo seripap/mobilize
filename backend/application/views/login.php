@@ -62,9 +62,9 @@ a.hide=function(){typeof this.timer==="number"&&(clearInterval(this.timer),delet
 
   </center>
   <div style="margin-top: 2em;">
-  <span>No Account? Sign up <a href="http://o0h.org/index.php/register">here</a></span>
+  <span>No Account? Sign up <a href="http://local.o0h.org/index.php/register">here</a></span>
   <br/>
-  <span>Need to retrieve your password? Get it <a href="http://o0h.org/index.php/forgot_password">here</a></span>
+  <span>Need to retrieve your password? Get it <a href="http://local.o0h.org/index.php/forgot_password">here</a></span>
   </div>
 </div>
 -->

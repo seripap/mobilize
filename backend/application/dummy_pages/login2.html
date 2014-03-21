@@ -9,11 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="../../html/css/icons.css">
 </head>
 <body>
-	<div id="wrapper-container"> 
-		<!-- Project Header --> 
- 
-		<!-- Project Content --> 
-		<div id="wrapper-content" class="login"> 
+	<div id="wrapper-container">
+		<!-- Project Header -->
+
+		<!-- Project Content -->
+		<div id="wrapper-content" class="login">
 			<section id="load-content" attr="scrollMe">
 				<article id="login" style="display:none;">
 					<div class="logo fullsize">
@@ -31,7 +31,7 @@
 					        <div class="icon-block facebook">
 					            <span class="icon icon-facebook"></span>
 					        </div>
-					        <div id="loginWithFB" class="title-block"> 
+					        <div id="loginWithFB" class="title-block">
 					            <p class="title">Sign In with Facebook</p>
 					        </div>
 					    </div>
@@ -103,7 +103,7 @@
 					<div class="context-wrapper">
 	<div class="context-block">
 		<center>
-		<img src="http://o0h.org/images/homeless.jpg" style="width: 100%; height: auto; max-width: 400px;">
+		<img src="http://local.o0h.org/images/homeless.jpg" style="width: 100%; height: auto; max-width: 400px;">
 	</center>
 		<h1 class="red">Our Mission</h1>
 		<p>Lost-n-Found Youth, Inc. is an Atlanta-based nonprofit corporation whose mission is to take homeless lesbian, gay, bisexual, and transgender youths off the street and transition them into more permanent housing arrangements. We operate a 24/7 hotline as well as a 6-bed housing facility in Atlanta, Georgia.</p>
@@ -130,29 +130,29 @@
 <br/><br/><br/><br/>
 				</article>
 			</section>
-		</div> 
- 
-		<!-- Project Footer --> 
+		</div>
+
+		<!-- Project Footer -->
 	</div>
 
 	<script type="text/javascript" src="../../html/js/iscroll.js"></script>
 	<script>
-		bodyScroll = new iScroll('wrapper-content', { 
+		bodyScroll = new iScroll('wrapper-content', {
 			checkDOMChanges: true,
 			onBeforeScrollStart: function (e) {
 				var target = e.target;
-				while (target.nodeType != 1) 
+				while (target.nodeType != 1)
 				target =target.parentNode;
 
 				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
-					e.preventDefault();  
+					e.preventDefault();
 				}
 			},
-			bounce:true, 
-			momentum:true, 
+			bounce:true,
+			momentum:true,
 			preventGhostClick:true
 		});
-			
+
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	</script>
 </body>
